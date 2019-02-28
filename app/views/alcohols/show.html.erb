@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Entity:</strong>
+  <%= @alcohol.entity %>
+</p>
+
+<p>
+  <strong>Code:</strong>
+  <%= @alcohol.code %>
+</p>
+
+<p>
+  <strong>Year:</strong>
+  <%= @alcohol.year %>
+</p>
+
+<p>
+  <strong>Consumption:</strong>
+  <%= @alcohol.consumption %>
+</p>
+
+<%= link_to 'Edit', edit_alcohol_path(@alcohol) %> |
+<%= link_to 'Back', alcohols_path %>

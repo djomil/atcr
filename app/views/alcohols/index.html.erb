@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Alcohols</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Entity</th>
+      <th>Code</th>
+      <th>Year</th>
+      <th>Consumption</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @alcohols.each do |alcohol| %>
+      <tr>
+        <td><%= alcohol.entity %></td>
+        <td><%= alcohol.code %></td>
+        <td><%= alcohol.year %></td>
+        <td><%= alcohol.consumption %></td>
+        <td><%= link_to 'Show', alcohol %></td>
+        <td><%= link_to 'Edit', edit_alcohol_path(alcohol) %></td>
+        <td><%= link_to 'Destroy', alcohol, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Alcohol', new_alcohol_path %>
