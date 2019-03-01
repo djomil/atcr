@@ -10,13 +10,24 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_02_28_161432) do
+ActiveRecord::Schema.define(version: 2019_03_01_133654) do
 
   create_table "alcohols", force: :cascade do |t|
     t.string "entity"
     t.string "code"
     t.string "year"
     t.decimal "consumption"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "smokings", force: :cascade do |t|
+    t.string "entity"
+    t.string "code"
+    t.string "year"
+    t.decimal "upper_bound"
+    t.decimal "lower_bound"
+    t.decimal "estimated_prevalence"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

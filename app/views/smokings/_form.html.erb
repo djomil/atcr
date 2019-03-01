@@ -1,0 +1,47 @@
+<%= form_with(model: smoking, local: true) do |form| %>
+  <% if smoking.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(smoking.errors.count, "error") %> prohibited this smoking from being saved:</h2>
+
+      <ul>
+      <% smoking.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :entity %>
+    <%= form.text_field :entity %>
+  </div>
+
+  <div class="field">
+    <%= form.label :code %>
+    <%= form.text_field :code %>
+  </div>
+
+  <div class="field">
+    <%= form.label :year %>
+    <%= form.text_field :year %>
+  </div>
+
+  <div class="field">
+    <%= form.label :upper_bound %>
+    <%= form.text_field :upper_bound %>
+  </div>
+
+  <div class="field">
+    <%= form.label :lower_bound %>
+    <%= form.text_field :lower_bound %>
+  </div>
+
+  <div class="field">
+    <%= form.label :estimated_prevalence %>
+    <%= form.text_field :estimated_prevalence %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
