@@ -1,13 +1,23 @@
+require 'csv'
 namespace :alcohol do
-  desc "TODO"
-  task load_list: :environment do
-  	Alcohol.destroy_all
-  	#initialize records from country list
-  	CSV.foreach("lib/assets/atcr_data/total_alcohol_consumption_per_capita_litres_of_pure_alcohol.csv", :headers =>true) do |row |
-  		puts row.inspect
-  		Alcohol.create(name:row[0])
-    	end
-  end
+  desc "pull alcohol information into database"
+  task seed_alcohol: :environment do
 
-end
+    #drop the old table data before importing the new stuff
+    Status.destroy_all
+    Deployment.destroy_all
+
+    p "tables emptied"
+
+      	CSV.foreach("lib/assets/atcr_data/total_alcohol_consumption.csv", :headers =>true) do |row ||
+      puts row.inspect #just so that we know the file's being read
+
+      #create new model instances with the data
+      Deployment.create!(
+      Entity: row[0].to_i,
+      Code: row[1].to_i,
+      Year: row[2].to_d,
+      Consumption: row[3].to_d,
+      )
+    end
 
