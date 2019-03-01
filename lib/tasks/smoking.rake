@@ -4,7 +4,7 @@ namespace :smoking do
   task seed_smoking: :environment do
 
     #drop the old table data before importing the new stuff
-        Alcohol.destroy_all
+        Smoking.destroy_all
 
     p "tables emptied"
 
