@@ -1,0 +1,1 @@
+json.partial! "sharepopulationsufferingcancers/sharepopulationsufferingcancer", sharepopulationsufferingcancer: @sharepopulationsufferingcancer

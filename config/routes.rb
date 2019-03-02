@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :sharepopulationsufferingcancers
   resources :sharepopulationsufferingtypescancers
   resources :riskfactorcancerdeaths
   resources :smokings
@@ -10,17 +11,26 @@ Rails.application.routes.draw do
     get 'alcohols/destroy'
     get 'alcohols/create'
     get 'alcohols/show'
+    get 'alcohols/edit'
     get 'smokings/index'
     get 'smokings/destroy'
     get 'smokings/create'
     get 'smokings/show'
+    get 'smokings/edit'
     get 'riskfactorcancerdeaths/index'
     get 'riskfactorcancerdeaths/destroy'
     get 'riskfactorcancerdeaths/create'
     get 'riskfactorcancerdeaths/show'
+    get 'riskfactorcancerdeaths/edit'
     get 'sharepopulationsufferingtypescancers/index'
     get 'sharepopulationsufferingtypescancers/destroy'
     get 'sharepopulationsufferingtypescancers/create'
     get 'sharepopulationsufferingtypescancers/show'
+    get 'sharepopulationsufferingtypescancers/edit'
+    get 'sharepopulationsufferingcancers/index'
+    get 'sharepopulationsufferingcancers/destroy'
+    get 'sharepopulationsufferingcancers/create'
+    get 'sharepopulationsufferingcancers/show'
+    get 'sharepopulationsufferingcancers/edit'
      # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
