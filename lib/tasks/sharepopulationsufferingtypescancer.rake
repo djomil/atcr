@@ -14,7 +14,7 @@ puts row.inspect  #just so that we know the file's being read
 Sharepopulationsufferingtypescancer.create!(
 entity: row[0].to_s,
 code: row[1].to_s,
-string: row[2].to_s,
+year: row[2].to_s,
 liver_cancer: row[3].to_d,
 larynx_cancer: row[4].to_d,
 kidney_cancer: row[5].to_d,
