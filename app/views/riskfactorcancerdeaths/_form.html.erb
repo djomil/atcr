@@ -1,0 +1,32 @@
+<%= form_with(model: riskfactorcancerdeath, local: true) do |form| %>
+  <% if riskfactorcancerdeath.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(riskfactorcancerdeath.errors.count, "error") %> prohibited this riskfactorcancerdeath from being saved:</h2>
+
+      <ul>
+      <% riskfactorcancerdeath.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :cause %>
+    <%= form.text_field :cause %>
+  </div>
+
+  <div class="field">
+    <%= form.label :year %>
+    <%= form.text_field :year %>
+  </div>
+
+  <div class="field">
+    <%= form.label :share_deaths %>
+    <%= form.text_field :share_deaths %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

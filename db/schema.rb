@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_03_01_152337) do
+ActiveRecord::Schema.define(version: 2019_03_02_095137) do
 
   create_table "alcohols", force: :cascade do |t|
     t.string "entity"
@@ -22,6 +22,14 @@ ActiveRecord::Schema.define(version: 2019_03_01_152337) do
   end
 
   create_table "risk_factor_of_cancer_deaths", force: :cascade do |t|
+    t.string "cause"
+    t.string "year"
+    t.decimal "share_deaths"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "riskfactorcancerdeaths", force: :cascade do |t|
     t.string "cause"
     t.string "year"
     t.decimal "share_deaths"

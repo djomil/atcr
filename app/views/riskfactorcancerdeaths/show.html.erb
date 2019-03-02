@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Cause:</strong>
+  <%= @riskfactorcancerdeath.cause %>
+</p>
+
+<p>
+  <strong>Year:</strong>
+  <%= @riskfactorcancerdeath.year %>
+</p>
+
+<p>
+  <strong>Share deaths:</strong>
+  <%= @riskfactorcancerdeath.share_deaths %>
+</p>
+
+<%= link_to 'Edit', edit_riskfactorcancerdeath_path(@riskfactorcancerdeath) %> |
+<%= link_to 'Back', riskfactorcancerdeaths_path %>

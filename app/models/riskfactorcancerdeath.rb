@@ -1,0 +1,2 @@
+class Riskfactorcancerdeath < ApplicationRecord
+end

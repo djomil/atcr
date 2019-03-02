@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :riskfactorcancerdeaths
   resources :smokings
   resources :alcohols
   resources :tests
@@ -12,5 +13,9 @@ Rails.application.routes.draw do
     get 'smokings/destroy'
     get 'smokings/create'
     get 'smokings/show'
+    get 'riskfactorcancerdeaths/index'
+    get 'riskfactorcancerdeaths/destroy'
+    get 'riskfactorcancerdeaths/create'
+    get 'riskfactorcancerdeaths/show'
      # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
