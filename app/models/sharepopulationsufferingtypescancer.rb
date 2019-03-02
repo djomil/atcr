@@ -1,0 +1,2 @@
+class Sharepopulationsufferingtypescancer < ApplicationRecord
+end

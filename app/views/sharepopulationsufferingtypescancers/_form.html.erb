@@ -1,0 +1,137 @@
+<%= form_with(model: sharepopulationsufferingtypescancer, local: true) do |form| %>
+  <% if sharepopulationsufferingtypescancer.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(sharepopulationsufferingtypescancer.errors.count, "error") %> prohibited this sharepopulationsufferingtypescancer from being saved:</h2>
+
+      <ul>
+      <% sharepopulationsufferingtypescancer.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :entity %>
+    <%= form.text_field :entity %>
+  </div>
+
+  <div class="field">
+    <%= form.label :code %>
+    <%= form.text_field :code %>
+  </div>
+
+  <div class="field">
+    <%= form.label :year %>
+    <%= form.text_field :year %>
+  </div>
+
+  <div class="field">
+    <%= form.label :liver_cancer %>
+    <%= form.text_field :liver_cancer %>
+  </div>
+
+  <div class="field">
+    <%= form.label :larynx_cancer %>
+    <%= form.text_field :larynx_cancer %>
+  </div>
+
+  <div class="field">
+    <%= form.label :kidney_cancer %>
+    <%= form.text_field :kidney_cancer %>
+  </div>
+
+  <div class="field">
+    <%= form.label :breast_cancer %>
+    <%= form.text_field :breast_cancer %>
+  </div>
+
+  <div class="field">
+    <%= form.label :thyroid_cancer %>
+    <%= form.text_field :thyroid_cancer %>
+  </div>
+
+  <div class="field">
+    <%= form.label :stomach_cancer %>
+    <%= form.text_field :stomach_cancer %>
+  </div>
+
+  <div class="field">
+    <%= form.label :uterine_cancer %>
+    <%= form.text_field :uterine_cancer %>
+  </div>
+
+  <div class="field">
+    <%= form.label :ovarian_cancer %>
+    <%= form.text_field :ovarian_cancer %>
+  </div>
+
+  <div class="field">
+    <%= form.label :bladder_cancer %>
+    <%= form.text_field :bladder_cancer %>
+  </div>
+
+  <div class="field">
+    <%= form.label :prostate_cancer %>
+    <%= form.text_field :prostate_cancer %>
+  </div>
+
+  <div class="field">
+    <%= form.label :cervical_cancer %>
+    <%= form.text_field :cervical_cancer %>
+  </div>
+
+  <div class="field">
+    <%= form.label :pancreatic_cancer %>
+    <%= form.text_field :pancreatic_cancer %>
+  </div>
+
+  <div class="field">
+    <%= form.label :esophageal_cancer %>
+    <%= form.text_field :esophageal_cancer %>
+  </div>
+
+  <div class="field">
+    <%= form.label :testicular_cancer %>
+    <%= form.text_field :testicular_cancer %>
+  </div>
+
+  <div class="field">
+    <%= form.label :nasopharynx_cancer %>
+    <%= form.text_field :nasopharynx_cancer %>
+  </div>
+
+  <div class="field">
+    <%= form.label :colon_and_rectum_cancer %>
+    <%= form.text_field :colon_and_rectum_cancer %>
+  </div>
+
+  <div class="field">
+    <%= form.label :non_melanoma_skin_cancer %>
+    <%= form.text_field :non_melanoma_skin_cancer %>
+  </div>
+
+  <div class="field">
+    <%= form.label :lip_and_oral_cancer %>
+    <%= form.text_field :lip_and_oral_cancer %>
+  </div>
+
+  <div class="field">
+    <%= form.label :brain_and_nervous_system_cancer %>
+    <%= form.text_field :brain_and_nervous_system_cancer %>
+  </div>
+
+  <div class="field">
+    <%= form.label :tracheal_bronchus_and_lung_cancer %>
+    <%= form.text_field :tracheal_bronchus_and_lung_cancer %>
+  </div>
+
+  <div class="field">
+    <%= form.label :gallbladder_and_biliary_tract_cancer %>
+    <%= form.text_field :gallbladder_and_biliary_tract_cancer %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

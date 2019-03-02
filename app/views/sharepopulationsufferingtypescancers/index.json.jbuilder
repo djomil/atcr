@@ -1,0 +1,1 @@
+json.array! @sharepopulationsufferingtypescancers, partial: 'sharepopulationsufferingtypescancers/sharepopulationsufferingtypescancer', as: :sharepopulationsufferingtypescancer

@@ -1,0 +1,73 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Sharepopulationsufferingtypescancers</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Entity</th>
+      <th>Code</th>
+      <th>Year</th>
+      <th>Liver cancer</th>
+      <th>Larynx cancer</th>
+      <th>Kidney cancer</th>
+      <th>Breast cancer</th>
+      <th>Thyroid cancer</th>
+      <th>Stomach cancer</th>
+      <th>Uterine cancer</th>
+      <th>Ovarian cancer</th>
+      <th>Bladder cancer</th>
+      <th>Prostate cancer</th>
+      <th>Cervical cancer</th>
+      <th>Pancreatic cancer</th>
+      <th>Esophageal cancer</th>
+      <th>Testicular cancer</th>
+      <th>Nasopharynx cancer</th>
+      <th>Colon and rectum cancer</th>
+      <th>Non melanoma skin cancer</th>
+      <th>Lip and oral cancer</th>
+      <th>Brain and nervous system cancer</th>
+      <th>Tracheal bronchus and lung cancer</th>
+      <th>Gallbladder and biliary tract cancer</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @sharepopulationsufferingtypescancers.each do |sharepopulationsufferingtypescancer| %>
+      <tr>
+        <td><%= sharepopulationsufferingtypescancer.entity %></td>
+        <td><%= sharepopulationsufferingtypescancer.code %></td>
+        <td><%= sharepopulationsufferingtypescancer.year %></td>
+        <td><%= sharepopulationsufferingtypescancer.liver_cancer %></td>
+        <td><%= sharepopulationsufferingtypescancer.larynx_cancer %></td>
+        <td><%= sharepopulationsufferingtypescancer.kidney_cancer %></td>
+        <td><%= sharepopulationsufferingtypescancer.breast_cancer %></td>
+        <td><%= sharepopulationsufferingtypescancer.thyroid_cancer %></td>
+        <td><%= sharepopulationsufferingtypescancer.stomach_cancer %></td>
+        <td><%= sharepopulationsufferingtypescancer.uterine_cancer %></td>
+        <td><%= sharepopulationsufferingtypescancer.ovarian_cancer %></td>
+        <td><%= sharepopulationsufferingtypescancer.bladder_cancer %></td>
+        <td><%= sharepopulationsufferingtypescancer.prostate_cancer %></td>
+        <td><%= sharepopulationsufferingtypescancer.cervical_cancer %></td>
+        <td><%= sharepopulationsufferingtypescancer.pancreatic_cancer %></td>
+        <td><%= sharepopulationsufferingtypescancer.esophageal_cancer %></td>
+        <td><%= sharepopulationsufferingtypescancer.testicular_cancer %></td>
+        <td><%= sharepopulationsufferingtypescancer.nasopharynx_cancer %></td>
+        <td><%= sharepopulationsufferingtypescancer.colon_and_rectum_cancer %></td>
+        <td><%= sharepopulationsufferingtypescancer.non_melanoma_skin_cancer %></td>
+        <td><%= sharepopulationsufferingtypescancer.lip_and_oral_cancer %></td>
+        <td><%= sharepopulationsufferingtypescancer.brain_and_nervous_system_cancer %></td>
+        <td><%= sharepopulationsufferingtypescancer.tracheal_bronchus_and_lung_cancer %></td>
+        <td><%= sharepopulationsufferingtypescancer.gallbladder_and_biliary_tract_cancer %></td>
+        <td><%= link_to 'Show', sharepopulationsufferingtypescancer %></td>
+        <td><%= link_to 'Edit', edit_sharepopulationsufferingtypescancer_path(sharepopulationsufferingtypescancer) %></td>
+        <td><%= link_to 'Destroy', sharepopulationsufferingtypescancer, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Sharepopulationsufferingtypescancer', new_sharepopulationsufferingtypescancer_path %>
