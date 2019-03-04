@@ -39,6 +39,7 @@ ActiveRecord::Schema.define(version: 2019_03_02_161912) do
 
   create_table "sharepopulationsufferingcancers", force: :cascade do |t|
     t.string "entity"
+    t.string "string"
     t.string "code"
     t.string "year"
     t.decimal "percentage_population_neoplasms"

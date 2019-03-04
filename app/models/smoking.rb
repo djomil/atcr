@@ -1,2 +1,0 @@
-class Smoking < ApplicationRecord
-end
