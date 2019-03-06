@@ -69,9 +69,14 @@ group :test do
   gem 'chromedriver-helper'
 end
 
+# Windows does not include zoneinfo files, so bundle the tzinfo-data gem
+gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+# Necessary to spot coordinates accross the world
+gem 'geocoder'
+gem 'gmaps4rails'
+
 group :production do
     gem 'pg'
 end
 
-# Windows does not include zoneinfo files, so bundle the tzinfo-data gem
-gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+
