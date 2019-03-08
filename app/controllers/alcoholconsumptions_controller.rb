@@ -7,6 +7,15 @@ class AlcoholconsumptionsController < ApplicationController
     @alcoholconsumptions = Alcoholconsumption.all
   end
 
+    def mapjson
+        @result = Alcoholconsumption.select("code AS code3, entity AS name, consumption AS value") 
+        respond_to do |format|
+            format.json do
+                render json: @result
+        end
+            end
+    end 
+    
   # GET /alcoholconsumptions/1
   # GET /alcoholconsumptions/1.json
   def show
