@@ -10,7 +10,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_03_02_161912) do
+ActiveRecord::Schema.define(version: 2019_03_08_092018) do
+
+  create_table "alcoholconsumptions", force: :cascade do |t|
+    t.string "entity"
+    t.string "code"
+    t.string "year"
+    t.decimal "consumption"
+    t.float "latitude"
+    t.float "longitude"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "alcohols", force: :cascade do |t|
     t.string "entity"

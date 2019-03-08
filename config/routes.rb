@@ -1,15 +1,15 @@
 Rails.application.routes.draw do
+  resources :alcoholconsumptions
   resources :sharepopulationsufferingtypescancers
   resources :riskfactorcancerdeaths
-  resources :alcohols
   resources :tests
   get 'home/index'
   root 'home#index'
-    get 'alcohols/index'
-    get 'alcohols/destroy'
-    get 'alcohols/create'
-    get 'alcohols/show'
-    get 'alcohols/edit'
+    get 'alcoholconsumptions/index'
+    get 'alcoholconsumptions/destroy'
+    get 'alcoholconsumptions/create'
+    get 'alcoholconsumptions/show'
+    get 'alcoholconsumptions/edit'
     get 'riskfactorcancerdeaths/index'
     get 'riskfactorcancerdeaths/destroy'
     get 'riskfactorcancerdeaths/create'

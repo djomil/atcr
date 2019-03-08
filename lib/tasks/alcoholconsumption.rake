@@ -1,10 +1,10 @@
 require 'csv'
-namespace :alcohol do
-  desc "pull alcohol information into database"
-  task seed_alcohol: :environment do
+namespace :alcoholconsumption do
+  desc "pull alcoholconsumption information into database"
+  task seed_alcoholconsumption: :environment do
 
     #drop the old table data before importing the new stuff
-        Alcohol.destroy_all
+        Alcoholconsumption.destroy_all
 
     p "tables emptied"
 
@@ -12,11 +12,13 @@ namespace :alcohol do
       puts row.inspect #just so that we know the file's being read
 
       #create new model instances with the data
-      Alcohol.create!(
+      Alcoholconsumption.create!(
       entity: row[0].to_s,
       code: row[1].to_s,
-      year: row[2].to_i,
+      year: row[2].to_s,
       consumption: row[3].to_d,
+      latitude: row[4].to_f, 
+      longitude: row[5].to_f
       )
     end
 end 

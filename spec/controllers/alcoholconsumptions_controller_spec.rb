@@ -23,10 +23,10 @@ require 'rails_helper'
 # removed from Rails core in Rails 5, but can be added back in via the
 # `rails-controller-testing` gem.
 
-RSpec.describe AlcoholsController, type: :controller do
+RSpec.describe AlcoholconsumptionsController, type: :controller do
 
   # This should return the minimal set of attributes required to create a valid
-  # Alcohol. As you add validations to Alcohol, be sure to
+  # Alcoholconsumption. As you add validations to Alcoholconsumption, be sure to
   # adjust the attributes here as well.
   let(:valid_attributes) {
     skip("Add a hash of attributes valid for your model")
@@ -38,12 +38,12 @@ RSpec.describe AlcoholsController, type: :controller do
 
   # This should return the minimal set of values that should be in the session
   # in order to pass any filters (e.g. authentication) defined in
-  # AlcoholsController. Be sure to keep this updated too.
+  # AlcoholconsumptionsController. Be sure to keep this updated too.
   let(:valid_session) { {} }
 
   describe "GET #index" do
     it "returns a success response" do
-      Alcohol.create! valid_attributes
+      Alcoholconsumption.create! valid_attributes
       get :index, params: {}, session: valid_session
       expect(response).to be_successful
     end
@@ -51,8 +51,8 @@ RSpec.describe AlcoholsController, type: :controller do
 
   describe "GET #show" do
     it "returns a success response" do
-      alcohol = Alcohol.create! valid_attributes
-      get :show, params: {id: alcohol.to_param}, session: valid_session
+      alcoholconsumption = Alcoholconsumption.create! valid_attributes
+      get :show, params: {id: alcoholconsumption.to_param}, session: valid_session
       expect(response).to be_successful
     end
   end
@@ -66,29 +66,29 @@ RSpec.describe AlcoholsController, type: :controller do
 
   describe "GET #edit" do
     it "returns a success response" do
-      alcohol = Alcohol.create! valid_attributes
-      get :edit, params: {id: alcohol.to_param}, session: valid_session
+      alcoholconsumption = Alcoholconsumption.create! valid_attributes
+      get :edit, params: {id: alcoholconsumption.to_param}, session: valid_session
       expect(response).to be_successful
     end
   end
 
   describe "POST #create" do
     context "with valid params" do
-      it "creates a new Alcohol" do
+      it "creates a new Alcoholconsumption" do
         expect {
-          post :create, params: {alcohol: valid_attributes}, session: valid_session
-        }.to change(Alcohol, :count).by(1)
+          post :create, params: {alcoholconsumption: valid_attributes}, session: valid_session
+        }.to change(Alcoholconsumption, :count).by(1)
       end
 
-      it "redirects to the created alcohol" do
-        post :create, params: {alcohol: valid_attributes}, session: valid_session
-        expect(response).to redirect_to(Alcohol.last)
+      it "redirects to the created alcoholconsumption" do
+        post :create, params: {alcoholconsumption: valid_attributes}, session: valid_session
+        expect(response).to redirect_to(Alcoholconsumption.last)
       end
     end
 
     context "with invalid params" do
       it "returns a success response (i.e. to display the 'new' template)" do
-        post :create, params: {alcohol: invalid_attributes}, session: valid_session
+        post :create, params: {alcoholconsumption: invalid_attributes}, session: valid_session
         expect(response).to be_successful
       end
     end
@@ -100,41 +100,41 @@ RSpec.describe AlcoholsController, type: :controller do
         skip("Add a hash of attributes valid for your model")
       }
 
-      it "updates the requested alcohol" do
-        alcohol = Alcohol.create! valid_attributes
-        put :update, params: {id: alcohol.to_param, alcohol: new_attributes}, session: valid_session
-        alcohol.reload
+      it "updates the requested alcoholconsumption" do
+        alcoholconsumption = Alcoholconsumption.create! valid_attributes
+        put :update, params: {id: alcoholconsumption.to_param, alcoholconsumption: new_attributes}, session: valid_session
+        alcoholconsumption.reload
         skip("Add assertions for updated state")
       end
 
-      it "redirects to the alcohol" do
-        alcohol = Alcohol.create! valid_attributes
-        put :update, params: {id: alcohol.to_param, alcohol: valid_attributes}, session: valid_session
-        expect(response).to redirect_to(alcohol)
+      it "redirects to the alcoholconsumption" do
+        alcoholconsumption = Alcoholconsumption.create! valid_attributes
+        put :update, params: {id: alcoholconsumption.to_param, alcoholconsumption: valid_attributes}, session: valid_session
+        expect(response).to redirect_to(alcoholconsumption)
       end
     end
 
     context "with invalid params" do
       it "returns a success response (i.e. to display the 'edit' template)" do
-        alcohol = Alcohol.create! valid_attributes
-        put :update, params: {id: alcohol.to_param, alcohol: invalid_attributes}, session: valid_session
+        alcoholconsumption = Alcoholconsumption.create! valid_attributes
+        put :update, params: {id: alcoholconsumption.to_param, alcoholconsumption: invalid_attributes}, session: valid_session
         expect(response).to be_successful
       end
     end
   end
 
   describe "DELETE #destroy" do
-    it "destroys the requested alcohol" do
-      alcohol = Alcohol.create! valid_attributes
+    it "destroys the requested alcoholconsumption" do
+      alcoholconsumption = Alcoholconsumption.create! valid_attributes
       expect {
-        delete :destroy, params: {id: alcohol.to_param}, session: valid_session
-      }.to change(Alcohol, :count).by(-1)
+        delete :destroy, params: {id: alcoholconsumption.to_param}, session: valid_session
+      }.to change(Alcoholconsumption, :count).by(-1)
     end
 
-    it "redirects to the alcohols list" do
-      alcohol = Alcohol.create! valid_attributes
-      delete :destroy, params: {id: alcohol.to_param}, session: valid_session
-      expect(response).to redirect_to(alcohols_url)
+    it "redirects to the alcoholconsumptions list" do
+      alcoholconsumption = Alcoholconsumption.create! valid_attributes
+      delete :destroy, params: {id: alcoholconsumption.to_param}, session: valid_session
+      expect(response).to redirect_to(alcoholconsumptions_url)
     end
   end
 

@@ -1,0 +1,2 @@
+class Alcoholconsumption < ApplicationRecord
+end

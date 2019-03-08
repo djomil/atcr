@@ -5,8 +5,7 @@ class SharepopulationsufferingtypescancersController < ApplicationController
   # GET /sharepopulationsufferingtypescancers.json
   def index
     @sharepopulationsufferingtypescancers = Sharepopulationsufferingtypescancer.all
-          @sharepopulationsufferingtypescancers = Riskfactorcancerdeath.all
-      #@json_riskfactorcancerdeaths = @riskfactorcancerdeaths.as_json
+            #@json_riskfactorcancerdeaths = @riskfactorcancerdeaths.as_json
       #r_riskfactorcancerdeath = Riskfactorcancerdeath.find(3)
       #@json_riskfactorcancerdeaths = @riskfactorcancerdeath.as_json
      $json_var = @sharepopulationsufferingtypescancers   
