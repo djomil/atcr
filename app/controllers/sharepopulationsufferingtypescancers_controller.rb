@@ -4,11 +4,12 @@ class SharepopulationsufferingtypescancersController < ApplicationController
   # GET /sharepopulationsufferingtypescancers
   # GET /sharepopulationsufferingtypescancers.json
   def index
-    @sharepopulationsufferingtypescancers = Sharepopulationsufferingtypescancer.all
+    @sharepopulationsufferingtypescancers = Sharepopulationsufferingtypescancer.page params[:page]
             #@json_riskfactorcancerdeaths = @riskfactorcancerdeaths.as_json
       #r_riskfactorcancerdeath = Riskfactorcancerdeath.find(3)
       #@json_riskfactorcancerdeaths = @riskfactorcancerdeath.as_json
-     $json_var = @sharepopulationsufferingtypescancers   
+     $json_var = @sharepopulationsufferingtypescancers
+     
       
   end
 
