@@ -19,7 +19,9 @@ Rails.application.routes.draw do
     get 'sharepopulationsufferingtypescancers/destroy'
     get 'sharepopulationsufferingtypescancers/create'
     get 'sharepopulationsufferingtypescancers/show'
-    get 'sharepopulationsufferingtypescancers/edit'
+    get 'sharepopulationsufferingtypescancers/edit' 
+    
+    
      # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 
     get 'mapjson' => 'alcoholconsumptions#mapjson'
