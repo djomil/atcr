@@ -5,23 +5,12 @@ class RiskfactorcancerdeathsController < ApplicationController
   # GET /riskfactorcancerdeaths.json
   def index
     @riskfactorcancerdeaths = Riskfactorcancerdeath.all
-      #@json_riskfactorcancerdeaths = @riskfactorcancerdeaths.as_json
-      #r_riskfactorcancerdeath = Riskfactorcancerdeath.find(3)
-      #@json_riskfactorcancerdeaths = @riskfactorcancerdeath.as_json
-     $json_var = @riskfactorcancerdeaths    
   end
 
     
   # GET /riskfactorcancerdeaths/1
   # GET /riskfactorcancerdeaths/1.json
   def show
-            #list_countries = Country.find(4)
-  #remove hash	@countries = Country.all
-  #remove hash	@json_show = @country.as_json
-  #remove hash    @hash = Gmaps4rails.build_markers(@countries) do |country, marker|
- #remove hash marker.lat country.latitude
-  #remove hashmarker.lng country.longitude
-  #remove hash    end
   end
 
   # GET /riskfactorcancerdeaths/new
