@@ -1,4 +1,5 @@
 class ChartfactorController < ApplicationController
+    
     def index
     end
     

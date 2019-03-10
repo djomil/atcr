@@ -6,6 +6,15 @@ class RiskfactorcancerdeathsController < ApplicationController
   def index
     @riskfactorcancerdeaths = Riskfactorcancerdeath.all
   end
+    
+   # def highchart
+    #    @result = Riskfactorcancerdeath.all(riskfactorcancerdeath_params)
+     #   respond_to do |format|
+      #      format.json do 
+       #         render json: @result
+        #        end
+      #  end
+   # end
 
     
   # GET /riskfactorcancerdeaths/1
