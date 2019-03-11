@@ -4,14 +4,13 @@
 
 
 <body>
-  <script src="https://code.highcharts.com/highcharts.js"></script>
-<script src="https://code.highcharts.com/modules/data.js"></script>
-<script src="https://code.highcharts.com/modules/drilldown.js"></script>
+<script src="https://code.highcharts.com/highcharts.js"></script>
+<script src="https://code.highcharts.com/modules/exporting.js"></script>
+<script src="https://code.highcharts.com/modules/export-data.js"></script>
 
-<div id="container" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+<div id="container" style="min-width: 300px; height: 400px; margin: 0 auto"></div>
 
     <script>
-   // Create the chart
 Highcharts.chart('container', {
     chart: {
         type: 'column'
@@ -23,139 +22,66 @@ Highcharts.chart('container', {
         text: 'Global share of cancer deaths are attributed to the range of linked risk factors. These include known risks such as smoking, diet and nutrition, obesity, physical inactivity, alcohol consumption, air pollution, and environmental exposures. The remaining share therefore represents deaths which would be expected to have occurred in the absence of any risk factors. Source: <a href="https://ourworldindata.org/grapher/share-of-cancer-deaths-attributed-to-risk-factors" target="_blank">ourworldindata.org</a>'
     },
     xAxis: {
-        type: 'category'
+        type: 'category',
+        labels: {
+            rotation: -45,
+            style: {
+                fontSize: '13px',
+                fontFamily: 'Verdana, sans-serif'
+            }
+        }
     },
     yAxis: {
+        min: 0,
         title: {
-            text: 'Cancer deaths attributed to risk factors'
+            text: 'Cancer deaths attributed to risk factors(%)'
         }
-
     },
     legend: {
         enabled: false
     },
-    plotOptions: {
-        series: {
-            borderWidth: 0,
-            dataLabels: {
-                enabled: true,
-                format: '{point.y:.1f}%'
+    tooltip: {
+        pointFormat: 'Population in 2017: <b>{point.y:.1f} millions</b>'
+    },
+    series: [{
+        name: 'Risk Factors',
+        data: [
+            ['Cervical Cancer', 100.0],
+            ['Mesothelioma', 91.4],
+            ['Larynx cancer', 71.8],
+            ['Lip and oral cavity cancer', 69.8],
+            ['Esophageal cancer', 69.8],
+            ['Colon and rectum cancer', 53.2],
+            ['Liver cancer', 41.5],
+            ['Uterine cancer', 36.5],
+            ['Kidney cancer', 32.3],
+            ['Bladder cancer', 32.0],
+            ['Liver cancer', 41.5],
+            ['Pancreatic cancer', 27.5],
+            ['Breast cancer', 26.8],
+            ['Gallbladder and biliary tract cancer', 15.0],
+            ['Leukemia', 14.8],
+            ['Ovarian cancer', 12.3],
+            ['Thyroid cancer', 9.4],
+            ['Multiple myeloma', 6.8],
+            ['Non-Hodgkin lymphoma', 5.1],
+            ['Prostate cancer', 4.4]
+        ],
+        dataLabels: {
+            enabled: true,
+            rotation: -90,
+            color: '#FFFFFF',
+            align: 'right',
+            format: '{point.y:.1f}', // one decimal
+            y: 10, // 10 pixels down from the top
+            style: {
+                fontSize: '13px',
+                fontFamily: 'Verdana, sans-serif'
             }
         }
-    },
+    }]
+});
 
-    tooltip: {
-        headerFormat: '<span style="font-size:11px">{series.name}</span><br>',
-        pointFormat: '<span style="color:{point.color}">{point.name}</span>: <b>{point.y:.2f}%</b> of total<br/>'
-    },
-
-    "series": [
-        {
-            "name": "Risk factors",
-            "colorByPoint": true,
-            "data": [
-                {
-                    "name": "Cervical Cancer",
-                    "y": 100.0,
-                    "drilldown": null
-                },
-                {
-                    "name": "Mesothelioma",
-                    "y": 91.4,
-                    "drilldown": null
-                },
-                {
-                    "name": "Larynx cancer",
-                    "y": 71.8,
-                    "drilldown": null
-                },
-                {
-                    "name": "Lip and oral cavity cancer",
-                    "y": 	69.8,
-                    "drilldown": null
-                },
-                {
-                    "name": "Esophageal cancer",
-                    "y": 	69.8,
-                    "drilldown": null
-                },
-                {
-                    "name": "Colon and rectum cancer",
-                    "y": 	53.2,
-                    "drilldown": null
-                },
-                {
-                    "name": "Liver cancer",
-                    "y": 	41.5,
-                    "drilldown": null
-                },
-                {
-                    "name": "Uterine cancer",
-                    "y": 	36.5,
-                    "drilldown": null
-                },
-                {
-                    "name": "Kidney cancer",
-                    "y": 		32.3,
-                    "drilldown": null
-                },
-                {
-                    "name": "Bladder cancer",
-                    "y": 	32.0,
-                    "drilldown": null
-                },
-                {
-                    "name": "Liver cancer",
-                    "y": 	41.5,
-                    "drilldown": null
-                },
-                {
-                    "name": "Pancreatic cancer",
-                    "y": 	27.5,
-                    "drilldown": null
-                },
-                {
-                    "name": "Breast cancer",
-                    "y": 	26.8,
-                    "drilldown": null
-                },
-                {
-                    "name": "Gallbladder and biliary tract cancer",
-                    "y": 		15.0,
-                    "drilldown": null
-                },
-                {
-                    "name": "Leukemia",
-                    "y": 	14.8,
-                    "drilldown": null
-                },
-                {
-                    "name": "Ovarian cancer",
-                    "y": 		12.3,
-                    "drilldown": null
-                },
-                {
-                    "name": "Thyroid cancer",
-                    "y": 		9.4,
-                    "drilldown": null
-                },
-                {
-                    "name": "Multiple myeloma",
-                    "y": 		6.8,
-                    "drilldown": null
-                },
-                {
-                    "name": "Non-Hodgkin lymphoma",
-                    "y": 		5.1,
-                    "drilldown": null
-                },
-                {
-                    "name": "Prostate cancer",
-                    "y": 	4.4,
-                    "drilldown": null
-                },
-                            ]
-        });
     
     
     </script>
