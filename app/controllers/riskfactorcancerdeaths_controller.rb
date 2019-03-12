@@ -9,13 +9,17 @@ class RiskfactorcancerdeathsController < ApplicationController
     @riskfactorcancerdeaths = Riskfactorcancerdeath.all
   end
  
+  #  based on https://stackoverflow.com/questions/48756922/rails-4-how-to-display-an-rss-feed-on-html-view 
+  #  and http://cancerres.aacrjournals.org/rss/current.xml
     def rss 
-@result = Riskfactorcancerdeath(10)
-      respond_to do |format|
-          format.html
-          format.rss { render :layout => true } 
-      end
+require 'rubygems'
+    require 'rss'
+    require 'open-uri'
+ @rss = RSS::Parser.parse(http://cancerres.aacrjournals.org/rss/current.xml)
     end
+   
+  
+    
     
   # GET /riskfactorcancerdeaths/1
   # GET /riskfactorcancerdeaths/1.json

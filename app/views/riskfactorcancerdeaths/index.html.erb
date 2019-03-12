@@ -2,10 +2,17 @@
 
 <h1>Riskfactorcancerdeaths</h1>
 
-<head>
-    <%= auto_discovery_link_tag :rss, riskfactorcancerdeaths_url(:format => :rss) %> 
-    
-</head>
+  <% @rss.items.each do |item|%>
+    <div class="row">
+      <div id="article-div" class="col-xs-8">
+        <div class= "well well-lg">
+          <div class= "article-title">
+            <p><%="#{item.title}"%></p>
+          </div>
+        </div>
+      </div>
+    </div>
+   <% end %>
 
 
 <body>
