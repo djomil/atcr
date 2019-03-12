@@ -4,18 +4,18 @@ class RiskfactorcancerdeathsController < ApplicationController
   # GET /riskfactorcancerdeaths
   # GET /riskfactorcancerdeaths.json
   # based on https://www.lugolabs.com/articles/build-a-rss-feed-in-ruby-on-rails [11/3/19]
+    # alternatively make an attempt with https://makandracards.com/makandra/730-create-a-valid-rss-feed-in-rails 
   def index
     @riskfactorcancerdeaths = Riskfactorcancerdeath.all
-      @riskfactorcancerdeaths = Riskfactorcancerdeath(10)
+  end
+ 
+    def rss 
+@result = Riskfactorcancerdeath(10)
       respond_to do |format|
           format.html
           format.rss { render :layout => false } 
       end
-  end
- 
-    
-
-
+    end
     
   # GET /riskfactorcancerdeaths/1
   # GET /riskfactorcancerdeaths/1.json

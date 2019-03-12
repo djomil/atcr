@@ -1,8 +1,8 @@
 xml.instruct! :xml, :version => "1.0"
 xml.rss :version => "2.0" do
   xml.channel do
-    xml.title "My Company Blog"
-    xml.description "This is a blog by My Company"
+    xml.title "Risks of Factors"
+    xml.description "This is about cause of deaths"
     xml.link root_url
 
     @articles.each do |article|

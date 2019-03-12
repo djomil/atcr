@@ -5,9 +5,9 @@ class TestsController < ApplicationController
   # GET /tests.json
   def index
     @tests = Test.all
-  end
+        end
 
-  # GET /tests/1
+    # GET /tests/1
   # GET /tests/1.json
   def show
   end
