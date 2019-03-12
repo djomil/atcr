@@ -29,7 +29,7 @@ Rails.application.routes.draw do
     
     get 'mapjson' => 'alcoholconsumptions#mapjson'
     get 'highchart' => 'riskfactorcancerdeaths#highchart'
-    get 'rss' => 'riskfactorcancerdeaths#rss'  
+    get 'component' => 'riskfactorcancerdeaths#component'  
 
 end
 
