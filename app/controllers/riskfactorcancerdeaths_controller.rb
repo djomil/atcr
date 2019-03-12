@@ -13,7 +13,7 @@ class RiskfactorcancerdeathsController < ApplicationController
 @result = Riskfactorcancerdeath(10)
       respond_to do |format|
           format.html
-          format.rss { render :layout => false } 
+          format.rss { render :layout => true } 
       end
     end
     

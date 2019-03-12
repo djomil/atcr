@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-    resources :chartfactors
   resources :alcoholconsumptions
   resources :sharepopulationsufferingtypescancers
   resources :riskfactorcancerdeaths
@@ -23,13 +22,6 @@ Rails.application.routes.draw do
     get 'sharepopulationsufferingtypescancers/show'
     get 'sharepopulationsufferingtypescancers/edit' 
     
-    get 'chartfactors/index'
-    get 'chartfactors/show'
-    get 'chartfactors/new'
-    get 'chartfactors/edit'
-    get 'chartfactors/create'
-    get 'chartfactors/update'
-    get 'chartfactors/destroy'
 
                
      # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
@@ -37,7 +29,7 @@ Rails.application.routes.draw do
     
     get 'mapjson' => 'alcoholconsumptions#mapjson'
     get 'highchart' => 'riskfactorcancerdeaths#highchart'
-    get 'rss' => 'riskfactorcancerdeaths#rss'
+    get 'rss' => 'riskfactorcancerdeaths#rss'  
 
 end
 
