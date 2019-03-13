@@ -1,95 +1,12 @@
 <html>
   <head>
-    </head>
-    <body>
-        
+    </head>         
   
       <h1>This is my home page</h1>
       
       
-<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
-<script src="https://code.highcharts.com/maps/highmaps.js"></script>
-<script src="https://code.highcharts.com/maps/modules/data.js"></script>
-<script src="https://code.highcharts.com/maps/modules/exporting.js"></script>
-<script src="https://code.highcharts.com/maps/modules/offline-exporting.js"></script>
-<script src="https://code.highcharts.com/mapdata/custom/world.js"></script>
-
-<!-- Flag sprites service provided by Martijn Lafeber, https://github.com/lafeber/world-flags-sprite/blob/master/LICENSE -->
-<link rel="stylesheet" type="text/css" href="//github.com/downloads/lafeber/world-flags-sprite/flags32.css" />
-
-<div id="container"></div>
-      
-<a href = "<%= tests_path %>">this is a link to my data </a>
-<p>Find me in app/views/home/index.html.erb</p>
-
-        <script>
-      $.getJSON('/mapjson.json', function (data) {
-
-    // Prevent logarithmic errors in color calulcation
-    $.each(data, function () {
-        this.value = (this.value < 1 ? 1 : this.value);
-    });
-
-    // Initiate the chart
-    Highcharts.mapChart('container', {
-
-        chart: {
-            map: 'custom/world'
-        },
-
-        title: {
-            text: 'Alcohol Consumption by share of population'
-        },
-
-        legend: {
-            title: {
-                    text: 'Alcohol consumption',
-                style: {
-                    color: (Highcharts.theme && Highcharts.theme.textColor) || 'black'
-                }
-            }
-        },
-
-        mapNavigation: {
-            enabled: true,
-            buttonOptions: {
-                verticalAlign: 'bottom'
-            }
-        },
-
-        tooltip: {
-            backgroundColor: 'none',
-            borderWidth: 0,
-            shadow: false,
-            useHTML: true,
-            padding: 0,
-            pointFormat: '<span class="f32"><span class="flag {point.properties.hc-key}">' +
-                '</span></span> {point.name}<br>' +
-                '<span style="font-size:30px">{point.value}</span>',
-            positioner: function () {
-                return { x: 0, y: 250 };
-            }
-        },
-
-        colorAxis: {
-            min: 1,
-            max: 100,
-            type: 'logarithmic'
-        },
-
-        series: [{
-            data: data,
-            joinBy: ['iso-a3', 'code3'],
-            name: 'Alcohol consumption',
-            states: {
-                hover: {
-                    color: '#a4edba'
-                }
-            }
-        }]
-    });
-});
-      </script>
-      
-  </body>
+<a class="twitter-timeline" data-lang="en" href="https://twitter.com/CR_UK?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"   data-width="300"
+  data-height="300">Tweets by TwitterDev</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+    
+    
 
