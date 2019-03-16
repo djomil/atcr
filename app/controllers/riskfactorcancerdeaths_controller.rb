@@ -3,24 +3,12 @@ class RiskfactorcancerdeathsController < ApplicationController
 
   # GET /riskfactorcancerdeaths
   # GET /riskfactorcancerdeaths.json
-  # based on https://www.lugolabs.com/articles/build-a-rss-feed-in-ruby-on-rails [11/3/19]
-    # alternatively make an attempt with https://makandracards.com/makandra/730-create-a-valid-rss-feed-in-rails 
+
   def index
     @riskfactorcancerdeaths = Riskfactorcancerdeath.all
   end
- 
- 
-  #    based on https://stackoverflow.com/questions/48756922/rails-4-how-to-display-an-rss-feed-on-html-view 
-  #  and http://cancerres.aacrjournals.org/rss/current.xml
+  
    
-    def component
-require 'rubygems'
-    require 'rss'
-    require 'open-uri'
- @rss = RSS::Parser.parse("http://cancerres.aacrjournals.org/rss/current.xml")
-    end
-     
-    
   # GET /riskfactorcancerdeaths/1
   # GET /riskfactorcancerdeaths/1.json
   def show
