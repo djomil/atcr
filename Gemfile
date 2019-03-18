@@ -54,6 +54,9 @@ gem 'kaminari'
 
 gem 'bootstrap4-kaminari-views'
 
+#solved the problem of maps, but maybe old version
+gem 'leaflet'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
