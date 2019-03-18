@@ -1,11 +1,15 @@
+require 'rubygems'
+require 'rss'
+require 'open-uri'
 class TestsController < ApplicationController
   before_action :set_test, only: [:show, :edit, :update, :destroy]
 
   # GET /tests
   # GET /tests.json
   def index
+    @rss = RSS::Parser.parse('http://cancerres.aacrjournals.org/rss/current.xml')
     @tests = Test.all
-        end
+  end
 
     # GET /tests/1
   # GET /tests/1.json

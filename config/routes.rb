@@ -30,6 +30,6 @@ Rails.application.routes.draw do
     get 'mapjson' => 'alcoholconsumptions#mapjson'
     get 'highchart' => 'riskfactorcancerdeaths#highchart'
     get 'component' => 'riskfactorcancerdeaths#component'  
-
+get 'tests' => 'tests#index'
 end
 
