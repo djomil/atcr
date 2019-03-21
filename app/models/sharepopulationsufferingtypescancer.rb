@@ -1,2 +1,2 @@
 class Sharepopulationsufferingtypescancer < ApplicationRecord
-end
+ end

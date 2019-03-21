@@ -1,2 +1,4 @@
 class Riskfactorcancerdeath < ApplicationRecord
-  end
+    belongs_to :alcoholconsumption
+    has_and_belongs_to_many :sharepopulationsufferingtypescancer
+end
