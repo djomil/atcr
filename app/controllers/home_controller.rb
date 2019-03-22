@@ -1,18 +1,19 @@
 class HomeController < ApplicationController
   def index
-      @riskfactorcancerdeaths = Riskfactorcancerdeath.all
-      @riskfactorcancerdeaths_causes ||= []
-      @riskfactorcancerdeaths_sharedeaths ||= []
-      @riskfactorcancerdeaths.each do |riskfactorcancerdeath|
-       p riskfactorcancerdeath.to_s
-          p riskfactorcancerdeath.cause
-         @riskfactorcancerdeath_causes << riskfactorcancerdeath.cause
-          @riskfactorcancerdeath_sharedeaths << riskfactorcancerdeathshare_deaths
-        end
+     @riskfactorcancerdeaths = Riskfactorcancerdeath.all
+     @data =  []
+     @riskfactorcancerdeaths_sharedeaths = []
+     @riskfactorcancerdeaths.each do |riskfactorcancerdeath|
+         p riskfactorcancerdeath.to_s
+         p riskfactorcancerdeath.cause
+         @data << riskfactorcancerdeath.cause
+         @riskfactorcancerdeaths_sharedeaths << riskfactorcancerdeath.share_deaths
+       end
 
 end
 end 
 
+# <%= raw @data %> that is the format we will use in our array 
 
 #def index
  #  @cruises = Cruise.all
