@@ -10,7 +10,7 @@
 
 <div id="container" style="min-width: 300px; height: 400px; margin: 0 auto"></div>
 
-    <script>
+<script>
 Highcharts.chart('container', {
     chart: {
         type: 'column'
@@ -34,39 +34,18 @@ Highcharts.chart('container', {
     yAxis: {
         min: 0,
         title: {
-            text: 'Cancer deaths attributed to risk factors(%)' //fix the text, incorrect! 
+            text: 'Cancer deaths attributed to risk factors(%)' 
         }
     },
     legend: {
         enabled: false
     },
     tooltip: {
-        pointFormat: 'Population in 2017: <b>{point.y:.1f} millions</b>'
+        pointFormat: 'Population in 2017: <b>{point.y:.1f} millions</b>' //fix the text, incorrect! 
     },
     series: [{
         name: 'Risk Factors',
-        data: [
-            ['Cervical Cancer', 100.0],
-            ['Mesothelioma', 91.4],
-            ['Larynx cancer', 71.8],
-            ['Lip and oral cavity cancer', 69.8],
-            ['Esophageal cancer', 69.8],
-            ['Colon and rectum cancer', 53.2],
-            ['Liver cancer', 41.5],
-            ['Uterine cancer', 36.5],
-            ['Kidney cancer', 32.3],
-            ['Bladder cancer', 32.0],
-            ['Liver cancer', 41.5],
-            ['Pancreatic cancer', 27.5],
-            ['Breast cancer', 26.8],
-            ['Gallbladder and biliary tract cancer', 15.0],
-            ['Leukemia', 14.8],
-            ['Ovarian cancer', 12.3],
-            ['Thyroid cancer', 9.4],
-            ['Multiple myeloma', 6.8],
-            ['Non-Hodgkin lymphoma', 5.1],
-            ['Prostate cancer', 4.4]
-        ],
+        data: <%= raw @ %>,
         dataLabels: {
             enabled: true,
             rotation: -90,
@@ -81,9 +60,7 @@ Highcharts.chart('container', {
         }
     }]
 });
-
-    
-    </script>
+</script>
     
    
 </body>

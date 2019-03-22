@@ -6,6 +6,17 @@ class RiskfactorcancerdeathsController < ApplicationController
 
   def index
     @riskfactorcancerdeaths = Riskfactorcancerdeath.all
+           @riskfactorcancerdeaths = Riskfactorcancerdeath.all
+     @data =  []
+     @riskfactorcancerdeaths_sharedeaths = []
+     @riskfactorcancerdeaths.each do |riskfactorcancerdeath|
+         p riskfactorcancerdeath.to_s
+         p riskfactorcancerdeath.cause
+         @data << riskfactorcancerdeath.cause
+         @riskfactorcancerdeaths_sharedeaths << riskfactorcancerdeath.share_deaths
+       end
+     @prepared = @data.zip(@riskfactorcancerdeaths_sharedeaths)
+     puts @prepared.inspect
   end
   
    
