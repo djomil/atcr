@@ -41,11 +41,11 @@ Highcharts.chart('container', {
         enabled: false
     },
     tooltip: {
-        pointFormat: 'Population in 2017: <b>{point.y:.1f} millions</b>' //fix the text, incorrect! 
+        pointFormat: 'Percentage of risk factors in 2016: <b>{point.y:.1f} </b>' //fix the text, incorrect! 
     },
     series: [{
         name: 'Risk Factors',
-        data: <%= raw @ %>,
+        data: <%= raw @prepared %>,
         dataLabels: {
             enabled: true,
             rotation: -90,

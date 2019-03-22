@@ -5,8 +5,7 @@ class RiskfactorcancerdeathsController < ApplicationController
   # GET /riskfactorcancerdeaths.json
 
   def index
-    @riskfactorcancerdeaths = Riskfactorcancerdeath.all
-           @riskfactorcancerdeaths = Riskfactorcancerdeath.all
+              @riskfactorcancerdeaths = Riskfactorcancerdeath.all
      @data =  []
      @riskfactorcancerdeaths_sharedeaths = []
      @riskfactorcancerdeaths.each do |riskfactorcancerdeath|
