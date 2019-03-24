@@ -5,13 +5,24 @@ class SharepopulationsufferingtypescancersController < ApplicationController
   # GET /sharepopulationsufferingtypescancers.json
   def index
     @sharepopulationsufferingtypescancers = Sharepopulationsufferingtypescancer.page params[:page]
-            #@json_riskfactorcancerdeaths = @riskfactorcancerdeaths.as_json
-      #r_riskfactorcancerdeath = Riskfactorcancerdeath.find(3)
-      #@json_riskfactorcancerdeaths = @riskfactorcancerdeath.as_json
-     $json_var = @sharepopulationsufferingtypescancers
-    
+ @sharepopulationsufferingtypescancers = Sharepopulationsufferingtypescancer.all
+      @datapop = []
+      @sharepopulationsufferingtypescancers_entity = []
+      @sharepopulationsufferingtypescancers.each do |sharepopulationsufferingtypescancer|
+          p sharepopulationsufferingtypescancer.to_s
+          p sharepopulationsufferingtypescancer.colon_and_rectum_cancer
+          p sharepopulationsufferingtypescancer.stomach_cancer
+          p sharepopulationsufferingtypescancer.liver_cancer
+          @datapop << sharepopulationsufferingtypescancer.colon_and_rectum_cancer
+          @datapop << sharepopulationsufferingtypescancer.stomach_cancer
+          @datapop << sharepopulationsufferingtypescancer.liver_cancer
+          @sharepopulationsufferingtypescancers_entity << sharepopulationsufferingtypescancers_entities 
+          end
+      @ready = @datapop.zip(@sharepopulationsufferingtypescancers_entity)
+      puts @ready.inspect
+      @sharepopulationsufferingtypescancers = Sharepopulationsufferingtypescancer.all
      
-#          @riskfactorcancerdeaths = Riskfactorcancerdeath.all
+
  #          @riskfactorcancerdeaths = Riskfactorcancerdeath.all
  #    @data =  []
  #    @riskfactorcancerdeaths_sharedeaths = []
@@ -23,7 +34,12 @@ class SharepopulationsufferingtypescancersController < ApplicationController
   #     end
  #    @prepared = @data.zip(@riskfactorcancerdeaths_sharedeaths)
   #   puts @prepared.inspect
-    
+  #   
+  #   @riskfactorcancerdeaths = Riskfactorcancerdeath.all
+  
+      #colon_and_rectum_cancer
+      #stomach_cancer
+      #liver_cancer
       
   end
 
