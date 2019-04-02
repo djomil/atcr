@@ -6,22 +6,28 @@ class SharepopulationsufferingtypescancersController < ApplicationController
   def index
     @sharepopulationsufferingtypescancers = Sharepopulationsufferingtypescancer.page params[:page]
  @sharepopulationsufferingtypescancers = Sharepopulationsufferingtypescancer.all
-      @datapop = []
+ @sharepopulationsufferingtypescancers = Sharepopulationsufferingtypescancer.where(entity: 'World', year: [2013, 2014, 2015, 2016])
+      puts @sharepopulationsufferingtypescancers.inspect 
       @sharepopulationsufferingtypescancers_entity = []
-      @sharepopulationsufferingtypescancers.each do |sharepopulationsufferingtypescancer|
+      @sharepopulationsufferingtypescancer_year = []
+      @sharepopulationsufferingtypescancer_colon_and_rectum_cancer = []
+      @sharepopulationsufferingtypescancer_stomach_cancer = []
+      @sharepopulationsufferingtypescancer_liver_cancer = []
+      @sharepopulationsufferingtypescancers.each_with_index do |sharepopulationsufferingtypescancer, i|
+          @sharepopulationsufferingtypescancers_entity[i] = []
           p sharepopulationsufferingtypescancer.to_s
+          p sharepopulationsufferingtypescancer.year 
           p sharepopulationsufferingtypescancer.colon_and_rectum_cancer
           p sharepopulationsufferingtypescancer.stomach_cancer
           p sharepopulationsufferingtypescancer.liver_cancer
-          @datapop << sharepopulationsufferingtypescancer.colon_and_rectum_cancer
-          @datapop << sharepopulationsufferingtypescancer.stomach_cancer
-          @datapop << sharepopulationsufferingtypescancer.liver_cancer
-          @sharepopulationsufferingtypescancers_entity << sharepopulationsufferingtypescancers_entities 
+          @sharepopulationsufferingtypescancer_year << sharepopulationsufferingtypescancer.year
+          @sharepopulationsufferingtypescancer_colon_and_rectum_cancer << sharepopulationsufferingtypescancer.colon_and_rectum_cancer
+          @sharepopulationsufferingtypescancer_stomach_cancer << sharepopulationsufferingtypescancer.stomach_cancer
+          @sharepopulationsufferingtypescancer_liver_cancer << sharepopulationsufferingtypescancer.liver_cancer
           end
-      @ready = @datapop.zip(@sharepopulationsufferingtypescancers_entity)
+      puts @sharepopulationsufferingtypescancers_entity.inspect
       puts @ready.inspect
-      @sharepopulationsufferingtypescancers = Sharepopulationsufferingtypescancer.all
-     
+  end
 
  #          @riskfactorcancerdeaths = Riskfactorcancerdeath.all
  #    @data =  []
@@ -41,7 +47,7 @@ class SharepopulationsufferingtypescancersController < ApplicationController
       #stomach_cancer
       #liver_cancer
       
-  end
+
 
   # GET /sharepopulationsufferingtypescancers/1
   # GET /sharepopulationsufferingtypescancers/1.json
