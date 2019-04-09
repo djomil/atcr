@@ -17,35 +17,20 @@ class SharepopulationsufferingtypescancersController < ApplicationController
           @sharepopulationsufferingtypescancers_entity[i] = []
           p sharepopulationsufferingtypescancer.to_s
           p sharepopulationsufferingtypescancer.year 
-          p sharepopulationsufferingtypescancer.colon_and_rectum_cancer
-          p sharepopulationsufferingtypescancer.stomach_cancer
-          p sharepopulationsufferingtypescancer.liver_cancer
+          p sharepopulationsufferingtypescancer.colon_and_rectum_cancer.round
+          p sharepopulationsufferingtypescancer.stomach_cancer.round
+          p sharepopulationsufferingtypescancer.liver_cancer.round
           @sharepopulationsufferingtypescancer_year << sharepopulationsufferingtypescancer.year
           @sharepopulationsufferingtypescancer_colon_and_rectum_cancer << sharepopulationsufferingtypescancer.colon_and_rectum_cancer
           @sharepopulationsufferingtypescancer_stomach_cancer << sharepopulationsufferingtypescancer.stomach_cancer
           @sharepopulationsufferingtypescancer_liver_cancer << sharepopulationsufferingtypescancer.liver_cancer
+      #    @sharepopulationsufferingtypescancer_colon_and_rectum_cancer.round
+       #   @sharepopulationsufferingtypescancer_stomach_cancer.round
+       #   @sharepopulationsufferingtypescancer_liver_cancer.round
           end
       puts @sharepopulationsufferingtypescancers_entity.inspect
       puts @ready.inspect
   end
-
- #          @riskfactorcancerdeaths = Riskfactorcancerdeath.all
- #    @data =  []
- #    @riskfactorcancerdeaths_sharedeaths = []
-  #   @riskfactorcancerdeaths.each do |riskfactorcancerdeath|
- #        p riskfactorcancerdeath.to_s
-   #      p riskfactorcancerdeath.cause
-   #      @data << riskfactorcancerdeath.cause
-   #      @riskfactorcancerdeaths_sharedeaths << riskfactorcancerdeath.share_deaths
-  #     end
- #    @prepared = @data.zip(@riskfactorcancerdeaths_sharedeaths)
-  #   puts @prepared.inspect
-  #   
-  #   @riskfactorcancerdeaths = Riskfactorcancerdeath.all
-  
-      #colon_and_rectum_cancer
-      #stomach_cancer
-      #liver_cancer
       
 
 
