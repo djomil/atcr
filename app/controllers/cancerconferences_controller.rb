@@ -4,27 +4,30 @@ class CancerconferencesController < ApplicationController
   # GET /cancerconferences
   # GET /cancerconferences.json
   def index
-   
-         # @cancerconferences = Cancerconference.page params[:page]
- @cancerconferences = Cancerconference.all
+   @cancerconferences = Cancerconference.all
+      end
       
-      # MORE COMPLEX QUERY. TRY IT AS SECOND CHOICE
-# @cancerconferences = Sharepopulationsufferingtypescancer.where(entity: 'World', year: [2013, 2014, 2015, 2016])
-#      puts @cancerconferences.inspect 
-#      @cancerconferences_event = []
-#      @cancerconferences_latitude = []
-#      @cancerconferences_longitude = []
-#            @cancerconferences.each_with_index do |cancerconference, i|
-#          @cancerconferences_entity[i] = []
-#          p cancerconferences.to_s
-#          p cancerconferences.latitude 
-#          p cancerconferences.longitude
-#          @cancerconference_latitude << cancerconference.latitude
-#          @cancerconference_longitude<< cancerconference.longitude
-#          end
-#      puts @cancerconferences_event.inspect
-#      puts @dropthemic.inspect
-     
+      def leafmap
+          # MORE COMPLEX QUERY. TRY IT AS SECOND CHOICE
+      @cancerconferences = Cancerconference.page params[:page]
+         @cancerconferences = Cancerconference.where(event: ['MDS 2019 - 15th International Symposium on Myelodysplastic Syndromes', 'Association for Molecular Pathology (AMP) Global 2019', 'Eleventh Annual ENBDC workshop: Methods in mammary gland biology and breast cancer'])
+ puts @cancerconferences.inspect 
+      @cancerconferences_event = []
+      @cancerconference_latitude = []
+      @cancerconference_longitude = []
+            @cancerconferences.each_with_index do |cancerconference, i|
+          @cancerconferences_event[i] = []
+          p cancerconference.to_s
+          p cancerconference.latitude 
+          p cancerconference.longitude
+          @cancerconference_latitude << cancerconference.latitude
+          @cancerconference_longitude << cancerconference.longitude
+         end
+      puts @cancerconferences_event.inspect
+      puts @dropthemic.inspect      
+  end
+  
+    #ALTERNATIVE QUERY
       # @data =  []
     # @riskfactorcancerdeaths_sharedeaths = []
     # @riskfactorcancerdeaths.each do |riskfactorcancerdeath|
@@ -35,9 +38,7 @@ class CancerconferencesController < ApplicationController
     #   end
     # @prepared = @data.zip(@riskfactorcancerdeaths_sharedeaths)
     # puts @prepared.inspect
-      
-  end
-  
+    
 
   # GET /cancerconferences/1
   # GET /cancerconferences/1.json
