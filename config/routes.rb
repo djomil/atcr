@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :cancerconferences
   resources :alcoholconsumptions
   resources :sharepopulationsufferingtypescancers
   resources :riskfactorcancerdeaths
@@ -20,7 +21,12 @@ Rails.application.routes.draw do
     get 'sharepopulationsufferingtypescancers/destroy'
     get 'sharepopulationsufferingtypescancers/create'
     get 'sharepopulationsufferingtypescancers/show'
-    get 'sharepopulationsufferingtypescancers/edit' 
+    get 'sharepopulationsufferingtypescancers/edit'
+    get 'cancerconferences/index'
+    get 'cancerconferences/destroy'
+    get 'cancerconferences/create'
+    get 'cancerconferences/show'
+    get 'cancerconferences/edit'
     
 
                

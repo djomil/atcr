@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Event:</strong>
+  <%= @cancerconference.event %>
+</p>
+
+<p>
+  <strong>Location:</strong>
+  <%= @cancerconference.location %>
+</p>
+
+<p>
+  <strong>Country:</strong>
+  <%= @cancerconference.country %>
+</p>
+
+<p>
+  <strong>Latitude:</strong>
+  <%= @cancerconference.latitude %>
+</p>
+
+<p>
+  <strong>Longitude:</strong>
+  <%= @cancerconference.longitude %>
+</p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @cancerconference.date %>
+</p>
+
+<%= link_to 'Edit', edit_cancerconference_path(@cancerconference) %> |
+<%= link_to 'Back', cancerconferences_path %>

@@ -1,0 +1,2 @@
+class Cancerconference < ApplicationRecord
+end

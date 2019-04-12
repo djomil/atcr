@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_03_08_092018) do
+ActiveRecord::Schema.define(version: 2019_04_12_075557) do
 
   create_table "alcoholconsumptions", force: :cascade do |t|
     t.string "entity"
@@ -28,6 +28,17 @@ ActiveRecord::Schema.define(version: 2019_03_08_092018) do
     t.string "code"
     t.string "year"
     t.decimal "consumption"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "cancerconferences", force: :cascade do |t|
+    t.string "event"
+    t.string "location"
+    t.string "country"
+    t.float "latitude"
+    t.float "longitude"
+    t.date "date"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
