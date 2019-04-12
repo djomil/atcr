@@ -32,7 +32,7 @@ Rails.application.routes.draw do
                
      # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 
-    
+get 'cancerconferences' => 'cancerconferences#leafmap'    
     get 'mapjson' => 'alcoholconsumptions#mapjson'
     get 'highchart' => 'riskfactorcancerdeaths#highchart'
     get 'component' => 'riskfactorcancerdeaths#component'  

@@ -10,7 +10,7 @@ class CancerconferencesController < ApplicationController
       def leafmap
           # MORE COMPLEX QUERY. TRY IT AS SECOND CHOICE
       @cancerconferences = Cancerconference.page params[:page]
-         @cancerconferences = Cancerconference.where(event: ['MDS 2019 - 15th International Symposium on Myelodysplastic Syndromes', 'Association for Molecular Pathology (AMP) Global 2019', 'Eleventh Annual ENBDC workshop: Methods in mammary gland biology and breast cancer'])
+         @cancerconferences = Cancerconference.where(event: ['MDS 2019 - 15th International Symposium on Myelodysplastic Syndromes'])
  puts @cancerconferences.inspect 
       @cancerconferences_event = []
       @cancerconference_latitude = []
@@ -26,6 +26,9 @@ class CancerconferencesController < ApplicationController
       puts @cancerconferences_event.inspect
       puts @dropthemic.inspect      
   end
+    
+    # EXTENDING THE PREVIOUS QUERY , 'Association for Molecular Pathology (AMP) Global 2019', 'Eleventh Annual ENBDC workshop: Methods in mammary gland biology and breast cancer'
+    
   
     #ALTERNATIVE QUERY
       # @data =  []
