@@ -4,8 +4,40 @@ class CancerconferencesController < ApplicationController
   # GET /cancerconferences
   # GET /cancerconferences.json
   def index
-    @cancerconferences = Cancerconference.all
+   
+         # @cancerconferences = Cancerconference.page params[:page]
+ @cancerconferences = Cancerconference.all
+      
+      # MORE COMPLEX QUERY. TRY IT AS SECOND CHOICE
+# @cancerconferences = Sharepopulationsufferingtypescancer.where(entity: 'World', year: [2013, 2014, 2015, 2016])
+#      puts @cancerconferences.inspect 
+#      @cancerconferences_event = []
+#      @cancerconferences_latitude = []
+#      @cancerconferences_longitude = []
+#            @cancerconferences.each_with_index do |cancerconference, i|
+#          @cancerconferences_entity[i] = []
+#          p cancerconferences.to_s
+#          p cancerconferences.latitude 
+#          p cancerconferences.longitude
+#          @cancerconference_latitude << cancerconference.latitude
+#          @cancerconference_longitude<< cancerconference.longitude
+#          end
+#      puts @cancerconferences_event.inspect
+#      puts @dropthemic.inspect
+     
+      # @data =  []
+    # @riskfactorcancerdeaths_sharedeaths = []
+    # @riskfactorcancerdeaths.each do |riskfactorcancerdeath|
+    #     p riskfactorcancerdeath.to_s
+    #     p riskfactorcancerdeath.cause
+    #     @data << riskfactorcancerdeath.cause
+    #     @riskfactorcancerdeaths_sharedeaths << riskfactorcancerdeath.share_deaths
+    #   end
+    # @prepared = @data.zip(@riskfactorcancerdeaths_sharedeaths)
+    # puts @prepared.inspect
+      
   end
+  
 
   # GET /cancerconferences/1
   # GET /cancerconferences/1.json
