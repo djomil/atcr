@@ -13,32 +13,32 @@
 
   <div class="field">
     <%= form.label :name %>
-    <%= form.text_field :name %>
+    <%= form.text_field :name, id: :shop_name %>
   </div>
 
   <div class="field">
     <%= form.label :address %>
-    <%= form.text_field :address %>
+    <%= form.text_field :address, id: :shop_address %>
   </div>
 
   <div class="field">
     <%= form.label :country %>
-    <%= form.text_field :country %>
+    <%= form.text_field :country, id: :shop_country %>
   </div>
 
   <div class="field">
     <%= form.label :service %>
-    <%= form.text_area :service %>
+    <%= form.text_area :service, id: :shop_description, rows: 10, cols: 60 %>
   </div>
 
   <div class="field">
     <%= form.label :picture_url %>
-    <%= form.text_field :picture_url %>
+    <%= form.text_field :picture_url, id: :shop_picture_url %>
   </div>
 
   <div class="field">
     <%= form.label :price %>
-    <%= form.text_field :price %>
+    <%= form.text_field :price, id: :shop_price %>
   </div>
 
   <div class="actions">
