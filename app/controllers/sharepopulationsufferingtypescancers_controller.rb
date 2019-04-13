@@ -3,8 +3,8 @@ class SharepopulationsufferingtypescancersController < ApplicationController
 
   # GET /sharepopulationsufferingtypescancers
   # GET /sharepopulationsufferingtypescancers.json
-  def index
-    @sharepopulationsufferingtypescancers = Sharepopulationsufferingtypescancer.page params[:page]
+  def index #modify it so to have a separate chart from the query + we need the pagination + round it
+               @sharepopulationsufferingtypescancers = Sharepopulationsufferingtypescancer.page params[:page]
  @sharepopulationsufferingtypescancers = Sharepopulationsufferingtypescancer.all
  @sharepopulationsufferingtypescancers = Sharepopulationsufferingtypescancer.where(entity: 'World', year: [2013, 2014, 2015, 2016])
       puts @sharepopulationsufferingtypescancers.inspect 

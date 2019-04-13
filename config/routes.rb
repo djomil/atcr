@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :products
   resources :cancerconferences
   resources :alcoholconsumptions
   resources :sharepopulationsufferingtypescancers
@@ -27,6 +28,11 @@ Rails.application.routes.draw do
     get 'cancerconferences/create'
     get 'cancerconferences/show'
     get 'cancerconferences/edit'
+    get 'products/index'
+    get 'products/destroy'
+    get 'products/create'
+    get 'products/show'
+    get 'products/edit'
     
 
                
