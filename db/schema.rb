@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_04_12_075557) do
+ActiveRecord::Schema.define(version: 2019_04_13_110005) do
 
   create_table "alcoholconsumptions", force: :cascade do |t|
     t.string "entity"
@@ -94,6 +94,17 @@ ActiveRecord::Schema.define(version: 2019_04_12_075557) do
     t.decimal "brain_and_nervous_system_cancer"
     t.decimal "tracheal_bronchus_and_lung_cancer"
     t.decimal "gallbladder_and_biliary_tract_cancer"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "shops", force: :cascade do |t|
+    t.string "name"
+    t.string "address"
+    t.string "country"
+    t.text "service"
+    t.string "picture_url"
+    t.decimal "price", precision: 8, scale: 2
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
