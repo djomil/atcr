@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  resources :shops
   resources :cancerconferences
   resources :alcoholconsumptions
   resources :sharepopulationsufferingtypescancers

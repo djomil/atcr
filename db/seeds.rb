@@ -23,3 +23,35 @@ Shop.create!(name: 'Lake Comfort',
     picture_url: 'balbianellovilla.jpg',
     price: 250.0)
 
+#...
+Shop.create!(name: 'Desert Shelter',
+address: 'White Avenue 1490, Albuquerque, New Mexico, United States of America',
+service:
+ %{This beautiful piece is located in a beatiful, desertical pristine location in South-Western US.
+In desert one can find peace and Desert Shelter has been designed to let people find peace.
+The main services offered in the centre are: 
+Alcohol detox services 
+Yoga Sessions 
+Trekking Excursions
+Horse Riding 
+Pet therapy
+24/7 Psychological support},
+picture_url: 'deserthouse.jpg',
+    price: 350.0
+)
+#...
+Shop.create!(name: 'Da Gama Relief',
+address: 'Raia-Santimol Road 39, Camorlim, Goa, India',
+service: %{The aim beyond the creation of this centre is twofold: 
+on the one hand, customers can recover in a tropical location by their fatigue. 
+On the other hand, they can find easily themselves.
+The services offered in the centre are:      
+Alcohol detox services 
+Yoga lessons 
+Cricket pitches and equipment 
+Olympic swimming pool
+Cooking classes
+24/7 Psychological support 
+},
+picture_url:'goavilla.jpg',
+price: 300) 
