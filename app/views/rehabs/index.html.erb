@@ -14,13 +14,15 @@
     </tr>
   </thead>
 
+  
+    
   <tbody>
     <% @rehabs.each do |rehab| %>
       <tr>
         <td><%= rehab.name %></td>
         <td><%= rehab.address %></td>
         <td><%= rehab.service %></td>
-        <td><%= rehab.picture_url %></td>
+        <td><%= image_tag(rehab.picture_url) %></td> 
         <td><%= rehab.price %></td>
         <td><%= link_to 'Show', rehab %></td>
         <td><%= link_to 'Edit', edit_rehab_path(rehab) %></td>
