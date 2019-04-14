@@ -5,11 +5,10 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-Shop.delete_all
+Rehab.delete_all
 # ...
-Shop.create!(name: 'Lake Comfort',
-    address: 'Via Guido Monzino 2',
-    country: 'Italy',
+Rehab.create!(name: 'Lake Comfort',
+    address: 'Via Guido Monzino 2, Como, Italy',
     service:
     %{This rehab clinic is located in one of the most beautiful villas in Northern Italy.
     Here, in a quiet, yet beautiful location you can start comfortably your rehabilitation process.
@@ -24,7 +23,7 @@ Shop.create!(name: 'Lake Comfort',
     price: 250.0)
 
 #...
-Shop.create!(name: 'Desert Shelter',
+Rehab.create!(name: 'Desert Shelter',
 address: 'White Avenue 1490, Albuquerque, New Mexico, United States of America',
 service:
  %{This beautiful piece is located in a beatiful, desertical pristine location in South-Western US.
@@ -40,10 +39,10 @@ picture_url: 'deserthouse.jpg',
     price: 350.0
 )
 #...
-Shop.create!(name: 'Da Gama Relief',
+Rehab.create!(name: 'Da Gama Relief',
 address: 'Raia-Santimol Road 39, Camorlim, Goa, India',
 service: %{The aim beyond the creation of this centre is twofold: 
-on the one hand, customers can recover in a tropical location by their fatigue. 
+On the one hand, customers can recover in a tropical location by their fatigue. 
 On the other hand, they can find easily themselves.
 The services offered in the centre are:      
 Alcohol detox services 
@@ -54,4 +53,4 @@ Cooking classes
 24/7 Psychological support 
 },
 picture_url:'goavilla.jpg',
-price: 300) 
+price: 300.0) 
