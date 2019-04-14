@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @rehab.name %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @rehab.address %>
+</p>
+
+<p>
+  <strong>Service:</strong>
+  <%= @rehab.service %>
+</p>
+
+<p>
+  <strong>Picture url:</strong>
+  <%= @rehab.picture_url %>
+</p>
+
+<p>
+  <strong>Price:</strong>
+  <%= @rehab.price %>
+</p>
+
+<%= link_to 'Edit', edit_rehab_path(@rehab) %> |
+<%= link_to 'Back', rehabs_path %>

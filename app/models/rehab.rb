@@ -1,0 +1,2 @@
+class Rehab < ApplicationRecord
+end
