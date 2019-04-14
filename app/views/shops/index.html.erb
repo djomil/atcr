@@ -1,51 +1,9 @@
-<% if notice %>
-<aside id="notice"><%= notice %></aside>
-<% end %>
+<p id="notice"><%= notice %></p>
 
 <h1>Shops</h1>
 
-<table>
-    <tfoot>
-<tr>
-    <td colspan="3">
-<%= link_to 'New product', new_shop_path %>
-        </td>
-</tr>
-</tfoot>
-<tbody>
-     <% @shops.each do |shop| %>
-        <tr class="<%= cycle('list_line_odd', 'list_line_even') %>">
-            
-            <td class="picture">
-<%= image_tag(shop.picture_url, class: 'list_picture') %>
-</td>
-     
-            <td class="service">
-<h1><%= shop.service %></h1>
-<p>
-<%= truncate(strip_tags(shop.service),
-length: 80) %>
-</p>
-</td>
-            
-        
-<ul>
-<li><%= link_to 'Show', shop %></li>
-<li><%= link_to 'Edit', edit_shop_path(shop) %></li>
-<li>
-<%= link_to 'Destroy',
-shop,
-method: :delete,
-data: { confirm: 'Are you sure?' } %>
-</li>
-</ul>
-</tr>
-<% end %>
-</tbody>
-</table>            
-            
 
-<!--
+
   <thead>
     <tr>
       <th>Name</th>
@@ -77,4 +35,4 @@ data: { confirm: 'Are you sure?' } %>
 
 <br>
 
-<%= link_to 'New Shop', new_shop_path %> -->
+<%= link_to 'New Shop', new_shop_path %> 
