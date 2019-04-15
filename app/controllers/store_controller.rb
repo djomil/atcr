@@ -1,5 +1,5 @@
 class StoreController < ApplicationController
-    belongs_to :rehab
+    has_many :rehab
   def index
       @rehabs = Rehab.order(:title)
   end
