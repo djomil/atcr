@@ -1,5 +1,7 @@
 require 'test_helper'
 class ProductTest < ActiveSupport::TestCase
+    fixtures :rehabs
+    
 test "product attributes must not be empty" do
 rehab = Rehab.new
 assert rehab.invalid?
@@ -54,10 +56,26 @@ assert new_rehab(picture_url).invalid?, #picture_url is different. As well as re
 end
 end
 
+
+test "product is not valid without a unique title" do
+rehab = Rehab.new(name: rehab(:Lake).name,
+address: "Via Guido Monzino",
+price: 250.0,
+service: "Blabla"    
+image_url: "fred.gif")
+assert rehab.invalid?
+assert_equal ["has already been taken"], rehab.errors[:title]
+end
+
+
 end
 
 
 
-
+assert rehab.errors[:name].any?
+assert rehab.errors[:address].any?
+assert rehab.errors[:service].any?
+assert rehab.errors[:picture_url].any?
+    assert rehab.errors[:price].any?
 
 
