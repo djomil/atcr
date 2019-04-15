@@ -5,7 +5,7 @@ class CreateRehabs < ActiveRecord::Migration[5.2]
       t.string :address
       t.text :service
       t.string :picture_url
-      t.decimal :price
+      t.decimal :price, precision: 8, scale: 2
 
       t.timestamps
     end
