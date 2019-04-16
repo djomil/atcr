@@ -2,19 +2,22 @@
 <aside id="notice"><%= notice %></aside>
 <% end %>
 
-<h1>Buy your service</h1>
+<h2>Buy your service</h2>
 <ul class="catalog">
     <% @rehab.each do |rehab| %>
 <li>
 <%= image_tag(rehab.picture_url) %>
-<h2><%= rehab.name %></h2>
+<h3><%= rehab.name %></h3>
 <p>
 <%= sanitize(rehab.service) %>
 </p>
+    <p>
+        <%= rehab.address %>
+    </p>
 <div class="price">
 <%= number_to_currency(rehab.price) %>
-        <%= button_to 'Add to Cart' %>
-</div>
+         <button type="button" class="btn btn-success"><%='Add to Cart' %></button>
+ </div>
 </li>
 <% end %>
 </ul>
