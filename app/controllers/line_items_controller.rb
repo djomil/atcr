@@ -28,6 +28,7 @@ class LineItemsController < ApplicationController
   def create
       rehab = Rehab.find(params[:rehab_id])
     @line_item = @cart.line_items.new(line_item_params)
+
       
       respond_to do |format|
       if @line_item.save
@@ -72,6 +73,8 @@ class LineItemsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def line_item_params
-      params.require(:line_item).permit(:rehab_id, :cart_id)
+      params.permit(:rehab_id, :cart_id)
+        #To solve an error method it was necessary to delete require(:line_item)
     end
 end
+
