@@ -24,7 +24,7 @@
         <td><%= rehab.service %></td>
         <td><%= image_tag(rehab.picture_url) %></td> 
         <td><%= number_to_currency(rehab.price) %>
-            <%= button_to 'Add to Cart' %></td>
+             <button type="button" class="btn btn-success"><%= button_to 'Add to Cart' %></button></td>
         <td><%= link_to 'Show', rehab %></td>
         <td><%= link_to 'Edit', edit_rehab_path(rehab) %></td>
         <td><%= link_to 'Destroy', rehab, method: :delete, data: { confirm: 'Are you sure?' } %></td>
