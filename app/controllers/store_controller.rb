@@ -1,5 +1,5 @@
 class StoreController < ApplicationController
     def index
-      @rehab = Rehab.order(:title)
+      @rehab = Rehab.order(:name)
   end
 end

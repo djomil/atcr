@@ -6,13 +6,14 @@
 <ul class="catalog">
     <% @rehab.each do |rehab| %>
 <li>
-<%= image_tag(rehab_offers.picture_url) %>
+<%= image_tag(rehab.picture_url) %>
 <h2><%= rehab.name %></h2>
 <p>
 <%= sanitize(rehab.service) %>
 </p>
 <div class="price">
-<%= rehab.price %>
+<%= number_to_currency(rehab.price) %>
+        <%= button_to 'Add to Cart' %>
 </div>
 </li>
 <% end %>
