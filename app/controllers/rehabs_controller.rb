@@ -31,6 +31,7 @@ class RehabsController < ApplicationController
         format.html { redirect_to @rehab, notice: 'Rehab was successfully created.' }
         format.json { render :show, status: :created, location: @rehab }
       else
+          puts @rehab.errors.full_message #not sure it will work
         format.html { render :new }
         format.json { render json: @rehab.errors, status: :unprocessable_entity }
       end

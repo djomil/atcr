@@ -34,3 +34,11 @@ price: @rehab.price
 }
 assert_redirected_to rehab_url(@rehab)
 end
+
+test "can't delete rehab in cart" do
+ assert_difference('Rehab.count', 0) do
+ delete rehab_url(rehabs(:two))
+ end
+
+ assert_redirected_to rehabs_url
+ end

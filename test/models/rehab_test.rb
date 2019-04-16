@@ -57,7 +57,7 @@ end
 end
 
 
-test "product is not valid without a unique title" do
+test "rehab is not valid without a unique title" do
 rehab = Rehab.new(name: rehab(:Lake).name,
 address: "Via Guido Monzino",
 price: 250.0,
@@ -71,11 +71,11 @@ end
 end
 
 
-
+=begin
 assert rehab.errors[:name].any?
 assert rehab.errors[:address].any?
 assert rehab.errors[:service].any?
 assert rehab.errors[:picture_url].any?
     assert rehab.errors[:price].any?
-
+=end
 
