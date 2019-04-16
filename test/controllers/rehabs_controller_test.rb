@@ -42,3 +42,12 @@ test "can't delete rehab in cart" do
 
  assert_redirected_to rehabs_url
  end
+
+
+test "should destroy rehab" do
+assert_difference('Rehab.count', -1) do
+delete product_url(@rehab)
+end
+assert_redirected_to rehabs_url
+end
+

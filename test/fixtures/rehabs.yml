@@ -1,4 +1,4 @@
-Italy: 
+one: 
 name: Lake Comfort
 address: Via Guido Monzino 2, Como, Italy 
 service: This rehab clinic is located in one of the most beautiful villas in Northern Italy.
@@ -7,7 +7,7 @@ service: This rehab clinic is located in one of the most beautiful villas in Nor
 picture_url: balbianellovilla.jpg
 price: 250.0
 
-United States of America:
+two:
 name: Desert Shelter
 address: White Avenue 1490, Albuquerque, New Mexico, United States of America 
 service: This beautiful piece is located in a beatiful, desertical pristine location in South-Western US.
@@ -16,7 +16,7 @@ The main services offered in the centre are alcohol detox services, yoga session
 picture_url: deserthouse.jpg
 price: 350.0
 
-India:
+three:
 name: Da Gama Relief
 address: Raia-Santimol Road 39, Camorlim, Goa, India
 service: The aim beyond the creation of this centre is twofold: 
