@@ -4,7 +4,9 @@
 
 <h2>Buy your service</h2>
 <ul class="catalog">
+   <% cache @rehab do %>
     <% @rehab.each do |rehab| %>
+    <% cache rehab do %>
 <li>
 <%= image_tag(rehab.picture_url) %>
 <h3><%= rehab.name %></h3>
@@ -19,6 +21,8 @@
          <button type="button" class="btn btn-success"><%='Add to Cart' %></button>
  </div>
 </li>
-<% end %>
+    <% end %>
+    <% end %>
+    <% end %>
 </ul>
 
