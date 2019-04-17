@@ -27,8 +27,7 @@ class LineItemsController < ApplicationController
   # POST /line_items.json
   def create
       rehab = Rehab.find(params[:rehab_id])
-    @line_item = @cart.line_items.new(line_item_params)
-
+@line_item = @cart.add_rehab(rehab)
       
       respond_to do |format|
       if @line_item.save
