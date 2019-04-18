@@ -12,3 +12,9 @@ end
  assert_select 'li', "1 \u00D7 Da Gama Relief"         
 end
 end
+
+test "should update line_item" do
+ patch line_item_url(@line_item),
+ params: { line_item: { rehab_id: @line_item.rehab_id } }
+assert_redirected_to line_item_url(@line_item)
+end
