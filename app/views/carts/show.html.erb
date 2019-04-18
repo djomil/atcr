@@ -1,16 +1,29 @@
 <% if notice %>
 <aside id="notice"><%= notice %></aside>
 <% end %>
-<h2>Detoxyne.INC</h2>
+<h2>ATCR Cart</h2>
 
 <div class="alert alert-success">
   <strong>Great!</strong> You have successfully bought our service!
 </div>
 
-<ul>
-<% @cart.line_items.each do |item| %>
-<li><%= item.quantity %> &times; <%= item.rehab.name %></li>
+<table>
+<% @cart.line_items.each do |line_item| %>
+<tr>
+<td class="quantity"><%= line_item.quantity %></td>
+<td><%= line_item.rehab.name %></td>
+<td class="price"><%= number_to_currency(line_item.total_price) %></td>
+</tr>
 <% end %>
-</ul>
+<tfoot>
+<tr>
+<th colspan="2">Total:</th>
+<td class="price"><%= number_to_currency(@cart.total_price) %></td>
+</tr>
+</tfoot>
+</table>
 
 <%= button_to 'Empty cart', @cart, method: :delete, data: { confirm: 'Are you sure?' } %>
+
+
+

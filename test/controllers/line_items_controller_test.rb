@@ -9,7 +9,7 @@ end
  follow_redirect!
 
  assert_select 'h2', 'Detoxyne.INC'
- assert_select 'li', "1 \u00D7 Da Gama Relief"         
+ assert_select 'td', "1 \u00D7 Da Gama Relief"         
 end
 end
 
