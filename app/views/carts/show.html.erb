@@ -3,6 +3,10 @@
 <% end %>
 <h2>Detoxyne.INC</h2>
 
+<div class="alert alert-success">
+  <strong>Great!</strong> You have successfully bought our service!
+</div>
+
 <ul>
 <% @cart.line_items.each do |item| %>
 <li><%= item.quantity %> &times; <%= item.rehab.name %></li>
