@@ -10,12 +10,7 @@
 <li>
 <%= image_tag(rehab.picture_url) %>
 <h4><%= rehab.name %></h4>
-<p><button data-toggle="collapse" data-target="#demo">About this rehab</button>
-<div id="demo" class="collapse">
-<%= sanitize(rehab.service) %>
-</div>
-
-</p>
+<p><%= sanitize(rehab.service) %></p>
     <p>
 <%= rehab.address %></p>
 <div class="price"><h4>
