@@ -12,13 +12,9 @@ class CancerconferencesController < ApplicationController
       def leafmap
           # MORE COMPLEX QUERY. TRY IT AS SECOND CHOICE
       @cancerconferences = Cancerconference.page params[:page]
-         @cancerconferences = Cancerconference.where(event: ['MDS 2019 - 15th International Symposium on Myelodysplastic Syndromes'])
-          @cancerconferences_latitude = Cancerconference.latitude params[:latitude]
-          @cancerconferences_mybad = Cancerconference.longitude params[:longitude]
- puts @cancerconferences.inspect 
-  puts        @cancerconferences_latitude.inspect
-  puts        @cancerconferences_mybad.inspect
-          
+         @cancerconferences_event = Cancerconference.where(event: ['MDS 2019 - 15th International Symposium on Myelodysplastic Syndromes'])
+           puts @cancerconferences_event.inspect 
+                    
      # @cancerconferences_event = []
          # qui ci va l'unione delle due @coordinate
          # bisognerebbe provare della roba con l'array
