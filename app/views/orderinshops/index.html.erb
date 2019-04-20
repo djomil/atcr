@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Orderinshops</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Address</th>
+      <th>Email</th>
+      <th>Pay type</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @orderinshops.each do |orderinshop| %>
+      <tr>
+        <td><%= orderinshop.name %></td>
+        <td><%= orderinshop.address %></td>
+        <td><%= orderinshop.email %></td>
+        <td><%= orderinshop.pay_type %></td>
+        <td><%= link_to 'Show', orderinshop %></td>
+        <td><%= link_to 'Edit', edit_orderinshop_path(orderinshop) %></td>
+        <td><%= link_to 'Destroy', orderinshop, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Orderinshop', new_orderinshop_path %>

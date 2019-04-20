@@ -1,9 +1,9 @@
 require 'test_helper'
 
-Class OrdersControllerTest < ActionDispatch::IntegrationTest
+Class OrderinShopsControllerTest < ActionDispatch::IntegrationTest
 
 test "requires item in cart" do
- get new_order_url
+ get new_orderinshop_url
  assert_redirected_to store_index_path
  assert_equal flash[:notice], 'Your cart is empty'
  end

@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @orderinshop.name %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @orderinshop.address %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @orderinshop.email %>
+</p>
+
+<p>
+  <strong>Pay type:</strong>
+  <%= @orderinshop.pay_type %>
+</p>
+
+<%= link_to 'Edit', edit_orderinshop_path(@orderinshop) %> |
+<%= link_to 'Back', orderinshops_path %>
