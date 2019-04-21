@@ -79,6 +79,6 @@ class AlcoholconsumptionsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def alcoholconsumption_params
-      params.require(:alcoholconsumption).permit(:entity, :code, :year, :consumption, :latitude, :longitude, :longitude)
+      params.require(:alcoholconsumption).permit(:entity, :code, :year, :consumption, :latitude, :longitude, :longitude, :search)
     end
 end
