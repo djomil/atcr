@@ -3,9 +3,15 @@ class AlcoholconsumptionsController < ApplicationController
 
   # GET /alcoholconsumptions
   # GET /alcoholconsumptions.json
+  # Code based on https://medium.com/@zylberberg.jonathan/creating-a-search-form-in-rails-5-77fdef6be74d
   def index
+      if params[:entity]
+          @alcoholconsumptions = Alcoholconsumptions.where('entity LIKE ?', "%#{params[:entity]}%")
+                else
     @alcoholconsumptions = Alcoholconsumption.all
   end
+  end
+    
 
     def mapjson
         @result = Alcoholconsumption.select("code AS code3, entity AS name, consumption AS value") 

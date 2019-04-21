@@ -2,6 +2,11 @@
 
 <h1>Alcoholconsumptions</h1>
 
+<!-- code based on https://medium.com/@zylberberg.jonathan/creating-a-search-form-in-rails-5-77fdef6be74d -->
+<%= form_tag(alcoholconsumptions_path method: :get) do %>
+  Entity <%= text_field_tag :entity, params[:entity] %>
+  <%= submit_tag 'Search', name: nil %>
+<% end %>
 
 
 
