@@ -24,6 +24,7 @@
 </table>
 
 <%= button_to 'Empty cart', @cart, method: :delete, data: { confirm: 'Are you sure?' } %>
+ <%= button_to 'Checkout', new_orderinshop_path, method: :get, class: "checkout"%>
 
 
 
