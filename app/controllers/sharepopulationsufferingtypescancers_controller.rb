@@ -6,7 +6,7 @@ class SharepopulationsufferingtypescancersController < ApplicationController
   def index #modify it so to have a separate chart from the query + we need the pagination + round it
                @sharepopulationsufferingtypescancers = Sharepopulationsufferingtypescancer.page params[:page]
  @sharepopulationsufferingtypescancers = Sharepopulationsufferingtypescancer.all
- @sharepopulationsufferingtypescancers = Sharepopulationsufferingtypescancer.where(entity: 'World', year: [2013, 2014, 2015, 2016])
+ @sharepopulationsufferingtypescancers = Sharepopulationsufferingtypescancer.where(entity: 'Russia', year: [2013, 2014, 2015, 2016])
       puts @sharepopulationsufferingtypescancers.inspect 
       @sharepopulationsufferingtypescancers_entity = []
       @sharepopulationsufferingtypescancer_year = []
@@ -24,9 +24,6 @@ class SharepopulationsufferingtypescancersController < ApplicationController
           @sharepopulationsufferingtypescancer_colon_and_rectum_cancer << sharepopulationsufferingtypescancer.colon_and_rectum_cancer
           @sharepopulationsufferingtypescancer_stomach_cancer << sharepopulationsufferingtypescancer.stomach_cancer
           @sharepopulationsufferingtypescancer_liver_cancer << sharepopulationsufferingtypescancer.liver_cancer
-      #    @sharepopulationsufferingtypescancer_colon_and_rectum_cancer.round
-       #   @sharepopulationsufferingtypescancer_stomach_cancer.round
-       #   @sharepopulationsufferingtypescancer_liver_cancer.round
           end
       puts @sharepopulationsufferingtypescancers_entity.inspect
       puts @ready.inspect
