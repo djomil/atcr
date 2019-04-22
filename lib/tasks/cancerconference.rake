@@ -2,7 +2,7 @@ require 'csv'
 namespace :cancerconference do
 
 desc "pull cancerconference information into database"
-task seed_cancerconference: :environment do
+task seed: :environment do
 
 #drop the old table data before importing the new stuff
 Cancerconference.destroy_all
@@ -18,7 +18,7 @@ location: row[1].to_s,
 country: row[2].to_s,
 latitude: row[3].to_f,
 longitude: row[4].to_f,
-date: row[5].to_date)
+date: Date.parse(row[5]))
 end
 end
 end

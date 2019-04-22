@@ -9,56 +9,7 @@ class CancerconferencesController < ApplicationController
    @cancerconferences = Cancerconference.all
       end
       
-      def leafmap
-          # MORE COMPLEX QUERY. TRY IT AS SECOND CHOICE
-      @cancerconferences = Cancerconference.page params[:page]
-         @cancerconferences_event = Cancerconference.where(event: ['MDS 2019 - 15th International Symposium on Myelodysplastic Syndromes'])
-          @cancerconferences_event = []
-          @cancerconference_latitude = []
-          @cancerconference_longitude = []
-          @cancerconferences_event << cancerconference.event
-          @cancerconferences_latitude << cancerconference.latitude
-          @cancerconferences_longitude << cancerconference.longitude
-           puts @cancerconferences_event.inspect 
-          puts @cancerconferences_latitude.inspect
-          puts @cancerconferences_longitude.inspect
-      end 
-                    
-     # @cancerconferences_event = []
-         # qui ci va l'unione delle due @coordinate
-         # bisognerebbe provare della roba con l'array
-         # tipo @cancerconference_coordinate = @cancerconference_latitude + @cancerconference_longitude + @cancerconferences_event
-         # Piano B: prima riempi gli arrays e poi combina tutto in un'unica classe invece del contrario. Quella classe poi la usi nella view  
-  #    @cancerconference_latitude = []
-   #   @cancerconference_longitude = []
-    #        @cancerconferences.each_with_index do |cancerconference, i|
-     #     @cancerconferences_event[i] = []
-      #    p cancerconference.to_s
-       #   p cancerconference.latitude 
-        #  p cancerconference.longitude
-          #@cancerconference_latitude << cancerconference.latitude
-         # @cancerconference_longitude << cancerconference.longitude
-           #     @dropthemic = @cancerconference_latitude + @cancerconference_longitude
-   #      end
-  #    puts @cancerconferences_event.inspect
-  #    puts @dropthemic.inspect      
-  #end
-    
-    # EXTENDING THE PREVIOUS QUERY , 'Association for Molecular Pathology (AMP) Global 2019', 'Eleventh Annual ENBDC workshop: Methods in mammary gland biology and breast cancer'
-    
-  
-    #ALTERNATIVE QUERY
-      # @data =  []
-    # @riskfactorcancerdeaths_sharedeaths = []
-    # @riskfactorcancerdeaths.each do |riskfactorcancerdeath|
-    #     p riskfactorcancerdeath.to_s
-    #     p riskfactorcancerdeath.cause
-    #     @data << riskfactorcancerdeath.cause
-    #     @riskfactorcancerdeaths_sharedeaths << riskfactorcancerdeath.share_deaths
-    #   end
-    # @prepared = @data.zip(@riskfactorcancerdeaths_sharedeaths)
-    # puts @prepared.inspect
-    
+      
 
   # GET /cancerconferences/1
   # GET /cancerconferences/1.json

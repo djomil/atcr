@@ -26,12 +26,15 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
 }).addTo(map);
 
-
-L.marker([<%= raw @cancerconferences_latitude &&  raw @cancerconferences_longitude do%>]).addTo(map)
-    .bindPopup(<%= raw @cancerconferences_event %>)
+    
+    <% @cancerconferences.each do |conference| %>
+    <% date = conference.date.day.to_s + "/" + conference.date.month.to_s + "/" + conference.date.year.to_s %>
+           L.marker([<%= conference.latitude %>,  <%= conference.longitude %>]).addTo(map)
+    .bindPopup("<%= conference.event %>, on <%= date %>")
    .openPopup(); 
+    
     <% end %>
-    <% end %>
+   
 
    
     
