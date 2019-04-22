@@ -8,7 +8,6 @@ Rails.application.routes.draw do
   resources :alcoholconsumptions
   resources :sharepopulationsufferingtypescancers
   resources :riskfactorcancerdeaths
-  resources :tests
     
   get 'home/index'
   root 'home#index'
