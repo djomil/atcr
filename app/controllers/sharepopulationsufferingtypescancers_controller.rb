@@ -4,29 +4,27 @@ class SharepopulationsufferingtypescancersController < ApplicationController
   # GET /sharepopulationsufferingtypescancers
   # GET /sharepopulationsufferingtypescancers.json
   def index #modify it so to have a separate chart from the query + we need the pagination + round it
-               @sharepopulationsufferingtypescancers = Sharepopulationsufferingtypescancer.page params[:page]
- @sharepopulationsufferingtypescancers = Sharepopulationsufferingtypescancer.all
- @sharepopulationsufferingtypescancers = Sharepopulationsufferingtypescancer.where(entity: 'Russia', year: [2013, 2014, 2015, 2016])
-      puts @sharepopulationsufferingtypescancers.inspect 
-      @sharepopulationsufferingtypescancers_entity = []
-      @sharepopulationsufferingtypescancer_year = []
-      @sharepopulationsufferingtypescancer_colon_and_rectum_cancer = []
-      @sharepopulationsufferingtypescancer_stomach_cancer = []
-      @sharepopulationsufferingtypescancer_liver_cancer = []
-      @sharepopulationsufferingtypescancers.each_with_index do |sharepopulationsufferingtypescancer, i|
-          @sharepopulationsufferingtypescancers_entity[i] = []
-          p sharepopulationsufferingtypescancer.to_s
-          p sharepopulationsufferingtypescancer.year 
-          p sharepopulationsufferingtypescancer.colon_and_rectum_cancer.round
-          p sharepopulationsufferingtypescancer.stomach_cancer.round
-          p sharepopulationsufferingtypescancer.liver_cancer.round
-          @sharepopulationsufferingtypescancer_year << sharepopulationsufferingtypescancer.year
-          @sharepopulationsufferingtypescancer_colon_and_rectum_cancer << sharepopulationsufferingtypescancer.colon_and_rectum_cancer
-          @sharepopulationsufferingtypescancer_stomach_cancer << sharepopulationsufferingtypescancer.stomach_cancer
-          @sharepopulationsufferingtypescancer_liver_cancer << sharepopulationsufferingtypescancer.liver_cancer
-          end
-      puts @sharepopulationsufferingtypescancers_entity.inspect
-      puts @ready.inspect
+      
+
+     
+      @share = Sharepopulationsufferingtypescancer.page params[:page]
+      @russianshare = Sharepopulationsufferingtypescancer.where(entity: 'Russia', year: [2013, 2014, 2015, 2016])
+     
+     # puts @russianshare.last.year.to_s
+
+          titleArray = ['Year', 'Colon and Rectum Cancer', 'Stomach Cancer', 'Liver Cancer']
+      @russiaArray = []
+      @russiaArray << titleArray
+      @russianshare.each do |rshare|
+          rArray= []
+          rArray << rshare.year
+          rArray << rshare.colon_and_rectum_cancer
+          rArray << rshare.stomach_cancer
+          rArray << rshare.liver_cancer
+          @russiaArray << rArray
+      end
+
+      
   end
       
 

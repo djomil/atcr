@@ -1,5 +1,12 @@
 <p id="notice"><%= notice %></p>
 
+ <div class="container pagination justify-content-center" >
+   
+    </div>
+
+
+
+
 <h1>Sharepopulationsufferingtypescancers</h1>
 
 <p>
@@ -45,13 +52,7 @@
       google.charts.setOnLoadCallback(drawChart);
 
       function drawChart() {
-        var data = google.visualization.arrayToDataTable([
-            ['Year', 'Colon and Rectum Cancer', 'Stomach Cancer', 'Liver Cancer'],
-          [<%= raw @sharepopulationsufferingtypescancer_year %>],
-            [<%= raw @sharepopulationsufferingtypescancer_colon_and_rectum_cancer %>],
-            [<%= raw @sharepopulationsufferingtypescancer_stomach_cancer %>],
-            [<%= raw @sharepopulationsufferingtypescancer_liver_cancer %>]
-        ]);                                             		                                              				
+        var data = google.visualization.arrayToDataTable(<%= raw  @russiaArray %>);                                             		                                              				
                     
         var options = {
           title: 'Share of Population by Cancer Type',
@@ -68,6 +69,10 @@
 <body>
     <div id="curve_chart" style="width: 900px; height: 500px"></div>
   </body>
+
+    <div class = "container">
+         <%= paginate @share,  left: 3, right: 3, theme: 'twitter-bootstrap-4', pagination_class: "pagination-sm"  %>  
+    </div>
 
 
 <table>
@@ -102,7 +107,7 @@
   </thead>
 
   <tbody>
-    <% @sharepopulationsufferingtypescancers.each do |sharepopulationsufferingtypescancer| %>
+    <% @share.each do |sharepopulationsufferingtypescancer| %>
       <tr>
         <td><%= sharepopulationsufferingtypescancer.entity %></td>
         <td><%= sharepopulationsufferingtypescancer.code %></td>
@@ -135,7 +140,9 @@
     <% end %>
   </tbody>
 </table>
-
+    <div class = "container">
+         <%= paginate @share,  left: 3, right: 3, theme: 'twitter-bootstrap-4', pagination_class: "pagination-sm"  %>  
+    </div>
 <br>
 
 <%= link_to 'New Sharepopulationsufferingtypescancer', new_sharepopulationsufferingtypescancer_path %>
