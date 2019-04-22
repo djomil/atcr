@@ -13,28 +13,29 @@
   <body>
  
       
-      <nav class="navbar navbar-default">
+   <nav class="navbar navbar-default">
+  
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
  <button type="button" class="btn btn-outline-secondary"><a class="navbar-brand" href="<%= root_path %>">ATCR</a></button>
            <button type="button" class="btn btn-outline-info"><a class="navbar-brand" href="<%= alcoholconsumptions_url %>">Alcohol</a></button>
           <button type="button" class="btn btn-outline-info"><a class="navbar-brand" href="<%= riskfactorcancerdeaths_url %>">Risk of Deaths by Type of Cancer</a></button>
           <button type="button" class="btn btn-outline-info"><a class="navbar-brand" href="<%= sharepopulationsufferingtypescancers_url %>">Share Population Suffering Types of Cancer</a></button>
           <button type="button" class="btn btn-outline-info"><a class="navbar-brand" href="<%= cancerconferences_url %>">Conferences</a></button>
+          <button type="button" class="btn btn-outline-info"><a class="navbar-brand" href="<%= store_index_url %>">Store</a></button>
           <button type="button" class="btn btn-outline-secondary"><a class="navbar-brand" href="<%= rehabs_url %>">Rehab</a></button>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
 
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        
-        <a class="nav-link" href = "<%= tests_path %>">Test Data </a>  
+         
+        <a class="nav-link" href = "<%= tests_path %>">Test Data</a>  
       </li>
      
     </ul>
     
-  </div>
-</nav>
+  
+ </nav>
     <%= yield %>
       <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
