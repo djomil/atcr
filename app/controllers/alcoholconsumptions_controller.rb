@@ -6,7 +6,7 @@ class AlcoholconsumptionsController < ApplicationController
   # Code based on https://medium.com/@zylberberg.jonathan/creating-a-search-form-in-rails-5-77fdef6be74d
   def index
       if params[:entity]
-          @alcoholconsumptions = Alcoholconsumptions.where('entity LIKE ?', "%#{params[:entity]}%")
+          @alcoholconsumptions = Alcoholconsumption.where('entity LIKE ?', "%#{params[:entity]}%")
                 else
     @alcoholconsumptions = Alcoholconsumption.all
   end
