@@ -13,7 +13,16 @@ class CancerconferencesController < ApplicationController
           # MORE COMPLEX QUERY. TRY IT AS SECOND CHOICE
       @cancerconferences = Cancerconference.page params[:page]
          @cancerconferences_event = Cancerconference.where(event: ['MDS 2019 - 15th International Symposium on Myelodysplastic Syndromes'])
+          @cancerconferences_event = []
+          @cancerconference_latitude = []
+          @cancerconference_longitude = []
+          @cancerconferences_event << cancerconference.event
+          @cancerconferences_latitude << cancerconference.latitude
+          @cancerconferences_longitude << cancerconference.longitude
            puts @cancerconferences_event.inspect 
+          puts @cancerconferences_latitude.inspect
+          puts @cancerconferences_longitude.inspect
+      end 
                     
      # @cancerconferences_event = []
          # qui ci va l'unione delle due @coordinate
@@ -33,7 +42,7 @@ class CancerconferencesController < ApplicationController
    #      end
   #    puts @cancerconferences_event.inspect
   #    puts @dropthemic.inspect      
-  end
+  #end
     
     # EXTENDING THE PREVIOUS QUERY , 'Association for Molecular Pathology (AMP) Global 2019', 'Eleventh Annual ENBDC workshop: Methods in mammary gland biology and breast cancer'
     

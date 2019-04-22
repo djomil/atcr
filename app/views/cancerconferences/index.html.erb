@@ -27,10 +27,11 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 }).addTo(map);
 
 
-L.marker([<%= raw @dropthemic%>]).addTo(map)
-    .bindPopup(<%= @cancerconferences_event %>)
-   .openPopup();
-    
+L.marker([<%= raw @cancerconferences_latitude &&  raw @cancerconferences_longitude do%>]).addTo(map)
+    .bindPopup(<%= raw @cancerconferences_event %>)
+   .openPopup(); 
+    <% end %>
+    <% end %>
 
    
     
