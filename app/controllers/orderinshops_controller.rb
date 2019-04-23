@@ -82,7 +82,7 @@ before_action :set_order, only: [:show, :edit, :update, :destroy]
     private
     def ensure_cart_isnt_empty
  if @cart.line_items.empty?
- redirect_to store_index_url, notice: 'Your cart is empty'
+ redirect_to store_index_url, notice: 'You bought successfully your order'
  end
  end
     
