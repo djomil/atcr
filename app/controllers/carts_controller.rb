@@ -63,7 +63,8 @@ rescue_from ActiveRecord::RecordNotFound, with: :invalid_cart
     end
   end
     
-  private
+    
+    private
     # Use callbacks to share common setup or constraints between actions.
     def set_cart
       @cart = Cart.find(params[:id])
@@ -74,10 +75,12 @@ rescue_from ActiveRecord::RecordNotFound, with: :invalid_cart
       params.fetch(:cart, {}) #maybe you should remove the brackets
     end
     
+    
+    
     def invalid_cart
-logger.error "Attempt to access invalid cart #{params[:id]}"
- redirect_to store_index_url, notice: 'Invalid cart'
- end
+      logger.error "Attempt to access invalid cart #{params[:id]}"
+     redirect_to store_index_url, notice: 'Invalid cart'
+     end
 
     
 end

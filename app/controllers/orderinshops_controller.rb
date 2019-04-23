@@ -1,5 +1,5 @@
 class OrderinshopsController < ApplicationController
-    include CurrentCart
+include CurrentCart
 before_action :set_cart, only: [:new, :create]
 before_action :ensure_cart_isnt_empty, only: :new
 before_action :set_order, only: [:show, :edit, :update, :destroy]
@@ -33,10 +33,10 @@ before_action :set_order, only: [:show, :edit, :update, :destroy]
     respond_to do |format|
       if @orderinshop.save
           Cart.destroy(session[:cart_id])
-     session[:cart_id] = nil
-          OrderMailer.received(@orderinshop).deliver_later
-      format.html { redirect_to orderinshop_new_path }
-      format.json { render :show, status: :created, location: @orderinshop }
+          session[:cart_id] = nil
+          OrderinshopMailer.received(@orderinshop).deliver_later
+          format.html { redirect_to  new_orderinshop_path }
+          format.json { render :show, status: :created, location: @orderinshop }
       else
         format.html { render :new }
         format.json { render json: @orderinshop.errors, status: :unprocessable_entity }

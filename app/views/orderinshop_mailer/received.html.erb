@@ -1,5 +1,11 @@
-<h1>Orderinshop#received</h1>
+
 
 <p>
-  <%= @greeting %>, find me in app/views/orderinshop_mailer/received.html.erb
+    Dear <%= @orderinshop.name %>
+</p>
+<p>
+    Thank you for your recent order from Detox INC.
+    You ordered the following items:
+        <%= render @orderinshop.line_items -%>
+    We'll send you a separate e-mail when your order ships.
 </p>
