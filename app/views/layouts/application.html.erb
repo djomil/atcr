@@ -26,7 +26,21 @@
           <button type="button" class="btn btn-outline-info"><a class="navbar-brand" href="<%= store_index_url %>">Store</a></button>
           <button type="button" class="btn btn-outline-secondary"><a class="navbar-brand" href="<%= rehabs_url %>">Rehab</a></button>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
+   
+          <% if current_user %>
+    
+              <%= link_to 'Sign Out', destroy_user_session_path, method: :delete %>
+              
+    
+         <% else %>
+    
+              <%= link_to 'Sign Up', new_user_registration_path %>
+              <%= link_to 'Sign in', new_user_session_path %>
+    
+        <% end %>
+  
+              
+              <span class="navbar-toggler-icon"></span>
   </button>
 
       </li>
