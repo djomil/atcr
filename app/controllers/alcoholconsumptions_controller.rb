@@ -7,9 +7,10 @@ class AlcoholconsumptionsController < ApplicationController
   def index
       if params[:entity]
           @alcoholconsumptions = Alcoholconsumption.where('entity LIKE ?', "%#{params[:entity]}%")
-                else
-    @alcoholconsumptions = Alcoholconsumption.all
-  end
+      else
+          @alcoholconsumptions = Alcoholconsumption.all
+      end
+        @alcoholconsumptions = @alcoholconsumptions.page params[:page]
   end
     
 

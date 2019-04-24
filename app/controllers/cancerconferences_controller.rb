@@ -6,8 +6,8 @@ class CancerconferencesController < ApplicationController
 
   
   def index
-   @cancerconferences = Cancerconference.all
-      end
+      @cancerconferences = Cancerconference.page params[:page]
+  end
       
       
 

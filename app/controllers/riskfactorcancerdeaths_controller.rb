@@ -4,19 +4,17 @@ class RiskfactorcancerdeathsController < ApplicationController
   # GET /riskfactorcancerdeaths
   # GET /riskfactorcancerdeaths.json
 
-  def index
-              @riskfactorcancerdeaths = Riskfactorcancerdeath.all
-     @data =  []
-     @riskfactorcancerdeaths_sharedeaths = []
-     @riskfactorcancerdeaths.each do |riskfactorcancerdeath|
-         p riskfactorcancerdeath.to_s
-         p riskfactorcancerdeath.cause
-         @data << riskfactorcancerdeath.cause
-         @riskfactorcancerdeaths_sharedeaths << riskfactorcancerdeath.share_deaths
-       end
-     @prepared = @data.zip(@riskfactorcancerdeaths_sharedeaths)
-     puts @prepared.inspect
-  end
+    def index
+        @paginated = Riskfactorcancerdeath.page params[:page]
+        @riskfactorcancerdeaths = Riskfactorcancerdeath.all
+        @data =  []
+        @riskfactorcancerdeaths_sharedeaths = []
+        @riskfactorcancerdeaths.each do |riskfactorcancerdeath|
+            @data << riskfactorcancerdeath.cause
+            @riskfactorcancerdeaths_sharedeaths << riskfactorcancerdeath.share_deaths
+        end
+        @prepared = @data.zip(@riskfactorcancerdeaths_sharedeaths)
+    end
   
    
   # GET /riskfactorcancerdeaths/1
