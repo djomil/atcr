@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Riskfactorcancerdeaths</h1>
+<h1>Risks triggering cancer</h1>
 
 <script src="https://code.highcharts.com/highcharts.js"></script>
 <script src="https://code.highcharts.com/modules/exporting.js"></script>
@@ -82,6 +82,7 @@ Highcharts.chart('container', {
           <% if user_signed_in? %>
             <td><%= link_to 'Edit', edit_riskfactorcancerdeath_path(riskfactorcancerdeath) %></td>
             <td><%= link_to 'Destroy', riskfactorcancerdeath, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+            <td><%= link_to 'New Riskfactorcancerdeath', new_riskfactorcancerdeath_path %></td>
           <% end %>
       </tr>
     <% end %>
@@ -91,4 +92,4 @@ Highcharts.chart('container', {
 <%= paginate @paginated,  left: 3, right: 3, theme: 'twitter-bootstrap-4', pagination_class: "pagination-sm"  %> 
 <br>
 
-<%= link_to 'New Riskfactorcancerdeath', new_riskfactorcancerdeath_path %>
+

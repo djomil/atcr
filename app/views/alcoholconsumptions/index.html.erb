@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Alcoholconsumptions</h1>
+<h1>Alcohol consumption around the world</h1>
 
 <!-- code based on https://medium.com/@zylberberg.jonathan/creating-a-search-form-in-rails-5-77fdef6be74d -->
 <%= form_tag(alcoholconsumptions_path, :method => "get") do %>  
@@ -126,6 +126,7 @@
           <% if current_user && current_user.admin %>
         <td><%= link_to 'Edit', edit_alcoholconsumption_path(alcoholconsumption) %></td>
         <td><%= link_to 'Destroy', alcoholconsumption, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'New Alcoholconsumption', new_alcoholconsumption_path %></td>
           <% end %>
       </tr>
     <% end %>
@@ -135,4 +136,4 @@
 
 <br>
 
-<%= link_to 'New Alcoholconsumption', new_alcoholconsumption_path %>
+

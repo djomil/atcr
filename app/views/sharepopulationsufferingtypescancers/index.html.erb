@@ -7,7 +7,7 @@
 
 
 
-<h1>Sharepopulationsufferingtypescancers</h1>
+<h1>Share of population and types of cancer</h1>
 
 <p>
     Share of total population with different types of cancer over time, measured as the age-standardized percentage.<br>
@@ -109,6 +109,7 @@
           <% if user_signed_in? %>
         <td><%= link_to 'Edit', edit_sharepopulationsufferingtypescancer_path(sharepopulationsufferingtypescancer) %></td>
         <td><%= link_to 'Destroy', sharepopulationsufferingtypescancer, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'New Sharepopulationsufferingtypescancer', new_sharepopulationsufferingtypescancer_path %></td>
           <% end %>
       </tr>
     <% end %>
@@ -119,4 +120,4 @@
     </div>
 <br>
 
-<%= link_to 'New Sharepopulationsufferingtypescancer', new_sharepopulationsufferingtypescancer_path %>
+

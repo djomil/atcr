@@ -2,7 +2,7 @@
 
 <h1>Conferences on Cancer</h1>
 
-<p>In the map you will find the most interesting<br>conferences on cancer in May 2019<br>For more information visit the <a href = https://www.eacr.org/content/meetings.php>European Association for Cancer Research</a> website</p>
+<p>In the map you will find the most interesting<br>conferences on cancer between 2019 and 2020.<br>For more information visit the <a href = https://www.eacr.org/content/meetings.php>European Association for Cancer Research</a> website</p>
 
 
 
@@ -67,6 +67,7 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
           <% if user_signed_in? %>
         <td><%= link_to 'Edit', edit_cancerconference_path(cancerconference) %></td>
         <td><%= link_to 'Destroy', cancerconference, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'New Cancerconference', new_cancerconference_path %></td>
           <% end %>
       </tr>
     <% end %>
@@ -76,4 +77,4 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 
 <br>
 
-<%= link_to 'New Cancerconference', new_cancerconference_path %>
+
