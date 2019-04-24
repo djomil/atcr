@@ -125,8 +125,10 @@
         <td><%= alcoholconsumption.longitude %></td>
         <td><%= alcoholconsumption.longitude %></td>
         <td><%= link_to 'Show', alcoholconsumption %></td>
+          <% if user_signed_in? %>
         <td><%= link_to 'Edit', edit_alcoholconsumption_path(alcoholconsumption) %></td>
         <td><%= link_to 'Destroy', alcoholconsumption, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          <% end %>
       </tr>
     <% end %>
   </tbody>

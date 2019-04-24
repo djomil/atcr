@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :users
   resources :orderinshops
   resources :line_items
   resources :carts
@@ -37,8 +38,9 @@ Rails.application.routes.draw do
     get 'rehabs/show'
     get 'rehabs/edit'
     
-
-
+    
+# get 'sign_in', to: 'devise/sessions#destroy'
+    
                
      # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 

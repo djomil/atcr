@@ -134,8 +134,10 @@
         <td><%= sharepopulationsufferingtypescancer.tracheal_bronchus_and_lung_cancer %></td>
         <td><%= sharepopulationsufferingtypescancer.gallbladder_and_biliary_tract_cancer %></td>
         <td><%= link_to 'Show', sharepopulationsufferingtypescancer %></td>
+          <% if user_signed_in? %>
         <td><%= link_to 'Edit', edit_sharepopulationsufferingtypescancer_path(sharepopulationsufferingtypescancer) %></td>
         <td><%= link_to 'Destroy', sharepopulationsufferingtypescancer, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          <% end %>
       </tr>
     <% end %>
   </tbody>

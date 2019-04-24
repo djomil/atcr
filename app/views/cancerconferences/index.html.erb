@@ -64,8 +64,10 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
         <td><%= cancerconference.longitude %></td>
         <td><%= cancerconference.date %></td>
         <td><%= link_to 'Show', cancerconference %></td>
+          <% if user_signed_in? %>
         <td><%= link_to 'Edit', edit_cancerconference_path(cancerconference) %></td>
         <td><%= link_to 'Destroy', cancerconference, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          <% end %>
       </tr>
     <% end %>
   </tbody>

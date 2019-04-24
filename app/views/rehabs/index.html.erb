@@ -25,8 +25,11 @@
         <td><%= image_tag(rehab.picture_url) %></td> 
         <td><%= number_to_currency(rehab.price) %></td>
         <td><%= link_to 'Show', rehab %></td>
-        <td><%= link_to 'Edit', edit_rehab_path(rehab) %></td>
-        <td><%= link_to 'Destroy', rehab, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+         <% if user_signed_in? %>
+            <td><%= link_to 'Edit', edit_rehab_path(rehab) %></td>
+            <td><%= link_to 'Destroy', rehab, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+         <% end %>
+      
       </tr>
     <% end %>
   </tbody>

@@ -1,5 +1,6 @@
 class RehabsController < ApplicationController
   before_action :set_rehab, only: [:show, :edit, :update, :destroy]
+    before_action :authenticate_user!, except: [:show, :index]
 
   # GET /rehabs
   # GET /rehabs.json
