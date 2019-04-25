@@ -23,15 +23,6 @@ ActiveRecord::Schema.define(version: 2019_04_24_181720) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "alcohols", force: :cascade do |t|
-    t.string "entity"
-    t.string "code"
-    t.string "year"
-    t.decimal "consumption"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "cancerconferences", force: :cascade do |t|
     t.string "event"
     t.string "location"
@@ -69,29 +60,12 @@ ActiveRecord::Schema.define(version: 2019_04_24_181720) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "orders", force: :cascade do |t|
-    t.string "nam"
-    t.text "address"
-    t.string "email"
-    t.integer "pay_type"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "rehabs", force: :cascade do |t|
     t.string "name"
     t.string "address"
     t.text "service"
     t.string "picture_url"
-    t.decimal "price"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "risk_factor_of_cancer_deaths", force: :cascade do |t|
-    t.string "cause"
-    t.string "year"
-    t.decimal "share_deaths"
+    t.decimal "price", precision: 8, scale: 2
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -100,16 +74,6 @@ ActiveRecord::Schema.define(version: 2019_04_24_181720) do
     t.string "cause"
     t.string "year"
     t.decimal "share_deaths"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "sharepopulationsufferingcancers", force: :cascade do |t|
-    t.string "entity"
-    t.string "string"
-    t.string "code"
-    t.string "year"
-    t.decimal "percentage_population_neoplasms"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -139,23 +103,6 @@ ActiveRecord::Schema.define(version: 2019_04_24_181720) do
     t.decimal "brain_and_nervous_system_cancer"
     t.decimal "tracheal_bronchus_and_lung_cancer"
     t.decimal "gallbladder_and_biliary_tract_cancer"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "smokings", force: :cascade do |t|
-    t.string "entity"
-    t.string "code"
-    t.string "year"
-    t.decimal "upper_bound"
-    t.decimal "lower_bound"
-    t.decimal "estimated_prevalence"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "tests", force: :cascade do |t|
-    t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

@@ -38,11 +38,11 @@ The services offered in the centre are alcohol detox services, yoga lessons, cri
 picture_url:'goavilla.jpg',
 price: 300.0) 
 #...
-User.create!(email: 'user@yandex.ukr',
+User.create!(email: 'user@yandex.cu',
      password: 'locoloco',
      admin: false)
 #...
-User.create!(email: 'admin@yandex.rus',
+User.create!(email: 'admin@yandex.ar',
      password: 'admincyp',
      admin: true)
 
