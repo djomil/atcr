@@ -1,3 +1,3 @@
 class Cancerconference < ApplicationRecord
-    belongs_to :sharepopulationsufferingtypescancer
+    belongs_to :sharepopulationsufferingtypescancer,  optional: true
 end
