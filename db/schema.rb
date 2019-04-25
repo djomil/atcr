@@ -54,10 +54,8 @@ ActiveRecord::Schema.define(version: 2019_04_24_181720) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "quantity", default: 1
-    t.integer "order_id"
     t.integer "orderinshop_id"
     t.index ["cart_id"], name: "index_line_items_on_cart_id"
-    t.index ["order_id"], name: "index_line_items_on_order_id"
     t.index ["orderinshop_id"], name: "index_line_items_on_orderinshop_id"
     t.index ["rehab_id"], name: "index_line_items_on_rehab_id"
   end

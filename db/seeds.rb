@@ -37,3 +37,4 @@ The services offered in the centre are alcohol detox services, yoga lessons, cri
 },
 picture_url:'goavilla.jpg',
 price: 300.0) 
+#...
