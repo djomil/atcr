@@ -1,4 +1,5 @@
 require 'test_helper'
+require 'capybara'
 
 Class OrderinShopsControllerTest < ActionDispatch::IntegrationTest
 
@@ -13,4 +14,13 @@ test "should get new" do
 
 get new_order_url
 assert_response :success
+end
+
+test "should create order" do
+assert_difference('Orderinshop.count') do
+post orders_url, params: { order: { address: @orderinshop.address,
+email: @orderinshop.email, name: orderinshop.name,
+pay_type: @orderinshop.pay_type } }
+end
+ assert_redirected_to store_index_url
 end

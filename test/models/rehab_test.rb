@@ -50,9 +50,9 @@ ok.each do |picture_url|
 assert new_rehab(picture_url).valid?, 
 "#{picture_url} shouldn't be invalid" 
 end
-bad.each do |picture_url| #picture_url is different
-assert new_rehab(picture_url).invalid?, #picture_url is different. As well as rehab
-"#{picture_url} shouldn't be valid" #picture_url is different
+bad.each do |picture_url| 
+assert new_rehab(picture_url).invalid?, 
+"#{picture_url} shouldn't be valid" 
 end
 end
 
@@ -71,11 +71,4 @@ end
 end
 
 
-=begin
-assert rehab.errors[:name].any?
-assert rehab.errors[:address].any?
-assert rehab.errors[:service].any?
-assert rehab.errors[:picture_url].any?
-    assert rehab.errors[:price].any?
-=end
 
